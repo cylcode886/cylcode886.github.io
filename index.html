@@ -485,7 +485,7 @@
       border-radius: var(--radius);
       overflow: hidden;
       transition: all 0.3s;
-      cursor: pointer;
+      cursor: default;
     }
 
     .project-card:hover {
@@ -503,6 +503,7 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
 
     .project-thumb-1 { background: linear-gradient(135deg, #1c1c3a 0%, #2d1b69 100%); }
@@ -574,13 +575,15 @@
     }
 
     .stack-tag {
-      background: rgba(56,189,248,0.08);
-      border: 1px solid rgba(56,189,248,0.15);
-      color: var(--accent3);
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.25);
+      color: #4ade80;
       font-size: 0.7rem;
       padding: 3px 10px;
       border-radius: 50px;
       font-weight: 500;
+      cursor: default;
+      user-select: none;
     }
 
     .project-links {
@@ -761,11 +764,8 @@
     <div class="hero-glow2"></div>
     <div class="hero-content">
       <div class="hero-badge">iOS Developer</div>
-      <h1>Building Apps<br />for <span class="accent-text">Apple</span><br />Ecosystem</h1>
-      <p class="hero-sub">
-        Play Music. Play Code.<br />
-        Crafting smooth, intuitive iOS experiences with Swift — one app at a time.
-      </p>
+      <h1>Building Apps<br />for <span class="accent-text">Everyday</span><br />Life</h1>
+      <p class="hero-sub"></p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">
           View Portfolio
@@ -774,10 +774,7 @@
         <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-      Scroll to explore
-    </div>
+
   </section>
 
   <!-- ABOUT -->
@@ -785,36 +782,17 @@
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
         <div class="about-photo">
-          <!-- 請把這個 div 替換成 <img src="your-photo.jpg" alt="你的名字" style="width:100%;height:100%;object-fit:cover;"> -->
-          <div class="about-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
-            <span>Add your photo</span>
-          </div>
+          <img src="cylcode_Banner_pic.png" alt="cylcode" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+          <!-- placeholder hidden since image is set -->
+          <div class="about-photo-placeholder" style="display:none;"></div>
         </div>
         <div class="about-corner"></div>
       </div>
       <div class="about-text reveal">
         <div class="section-label">About Me</div>
         <h2 class="section-title">Hey, I'm cylcode</h2>
-        <p>I'm an iOS developer who lives at the intersection of <strong>music and code</strong>. Whether I'm composing a melody or architecting an app, I'm always looking for that perfect harmony between creativity and craft.</p>
-        <p>I believe great apps aren't just functional — they should feel <strong>alive</strong>. Every tap, every transition, every detail deserves intentional thought.</p>
-        <p>When I'm not shipping Swift code, you'll find me playing music, exploring new sounds, and occasionally doing both at the same time.</p>
-        <div class="stats-row">
-          <div class="stat-item">
-            <span class="stat-num">3<span>+</span></span>
-            <div class="stat-label">Years of Experience</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">9<span>+</span></span>
-            <div class="stat-label">Apps Built</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">2<span>k</span></span>
-            <div class="stat-label">GitHub Commits</div>
-          </div>
-        </div>
+        <p>Hi, I'm <strong>YILI CHO (cylcode)</strong>. As an iOS developer and mixing engineer, I blend creativity with functionality in both app development and music production.</p>
+
       </div>
     </div>
   </section>
@@ -823,68 +801,106 @@
   <section id="skills">
     <div class="section-label reveal">Skills</div>
     <h2 class="section-title reveal">What I Work With</h2>
-    <p class="section-desc reveal">Focused on Apple platforms, continuously learning and building.</p>
+    <p class="section-desc reveal">The tools I use to build, create, and bring ideas to life.</p>
     <div class="skills-grid">
+
       <div class="skill-card reveal">
-        <span class="skill-icon">🍎</span>
-        <div class="skill-name">Swift & SwiftUI</div>
-        <div class="skill-desc">Native iOS development with Swift and SwiftUI's declarative UI framework — building smooth, responsive interfaces that feel right at home on Apple devices.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Swift 5.9</span>
-          <span class="skill-tag">SwiftUI</span>
-          <span class="skill-tag">Combine</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#1C7ED6"/>
+            <path d="M50 15L72 28V52L50 65L28 52V28L50 15Z" fill="white" opacity="0.2"/>
+            <path d="M50 20L68 31V53L50 64L32 53V31L50 20Z" fill="white" opacity="0.15"/>
+            <text x="50" y="58" text-anchor="middle" font-size="28" font-weight="bold" fill="white" font-family="SF Pro, system-ui">X</text>
+          </svg>
+        </span>
+        <div class="skill-name">Xcode & SwiftUI</div>
+        <div class="skill-desc">Apple's primary IDE for building iOS, macOS, and watchOS apps — paired with SwiftUI's declarative framework for crafting beautiful, responsive interfaces.</div>
+        <div class="skill-tags"><span class="skill-tag">Swift</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Simulator</span></div>
       </div>
+
       <div class="skill-card reveal">
-        <span class="skill-icon">🏗️</span>
-        <div class="skill-name">Architecture Patterns</div>
-        <div class="skill-desc">Applying MVC, MVVM, and Clean Architecture to keep codebases readable, testable, and maintainable as apps grow in complexity.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">MVVM</span>
-          <span class="skill-tag">Clean Arch</span>
-          <span class="skill-tag">SOLID</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#2C2C2E"/>
+            <rect x="18" y="30" width="64" height="8" rx="4" fill="#FF6B35"/>
+            <rect x="18" y="46" width="48" height="8" rx="4" fill="#FF6B35" opacity="0.7"/>
+            <rect x="18" y="62" width="56" height="8" rx="4" fill="#FF6B35" opacity="0.4"/>
+            <circle cx="76" cy="34" r="8" fill="#FF6B35"/>
+          </svg>
+        </span>
+        <div class="skill-name">Avid Pro Tools</div>
+        <div class="skill-desc">Industry-standard digital audio workstation for professional recording, mixing, and audio post-production workflows.</div>
+        <div class="skill-tags"><span class="skill-tag">Audio Editing</span><span class="skill-tag">Mixing</span><span class="skill-tag">Recording</span></div>
       </div>
+
       <div class="skill-card reveal">
-        <span class="skill-icon">🔗</span>
-        <div class="skill-name">API & Networking</div>
-        <div class="skill-desc">Integrating RESTful APIs with URLSession and Alamofire, connecting Firebase backends, and handling async data flows gracefully.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">URLSession</span>
-          <span class="skill-tag">REST API</span>
-          <span class="skill-tag">Firebase</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#1C1C1E"/>
+            <path d="M50 20C33.4 20 20 33.4 20 50C20 66.6 33.4 80 50 80C66.6 80 80 66.6 80 50C80 33.4 66.6 20 50 20Z" fill="#E8E0F0" opacity="0.15"/>
+            <path d="M42 35L65 50L42 65V35Z" fill="#9B59B6"/>
+            <circle cx="50" cy="50" r="6" fill="#E8E0F0"/>
+          </svg>
+        </span>
+        <div class="skill-name">Logic Pro</div>
+        <div class="skill-desc">Apple's professional music production software for composing, arranging, and producing tracks — from sketching ideas to full studio-quality mixes.</div>
+        <div class="skill-tags"><span class="skill-tag">Music Production</span><span class="skill-tag">Composition</span><span class="skill-tag">MIDI</span></div>
       </div>
+
       <div class="skill-card reveal">
-        <span class="skill-icon">💾</span>
-        <div class="skill-name">Data Persistence</div>
-        <div class="skill-desc">Managing local storage with Core Data, UserDefaults, and Realm — including data migrations and CloudKit sync for seamless cross-device experiences.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Core Data</span>
-          <span class="skill-tag">Realm</span>
-          <span class="skill-tag">CloudKit</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#1C1C1E"/>
+            <path d="M20 35H80V65H20V35Z" rx="4" fill="#4A90D9" opacity="0.2"/>
+            <path d="M38 50L55 40V60L38 50Z" fill="#4A90D9"/>
+            <rect x="58" y="40" width="6" height="20" rx="2" fill="#4A90D9"/>
+            <rect x="68" y="40" width="6" height="20" rx="2" fill="#4A90D9"/>
+            <rect x="20" y="35" width="60" height="4" rx="2" fill="#4A90D9" opacity="0.4"/>
+          </svg>
+        </span>
+        <div class="skill-name">Final Cut Pro</div>
+        <div class="skill-desc">Apple's pro video editing software for cutting, color grading, and delivering polished video content with a fast, magnetic timeline workflow.</div>
+        <div class="skill-tags"><span class="skill-tag">Video Editing</span><span class="skill-tag">Color Grading</span><span class="skill-tag">Motion</span></div>
       </div>
+
       <div class="skill-card reveal">
-        <span class="skill-icon">🧪</span>
-        <div class="skill-name">Testing & CI/CD</div>
-        <div class="skill-desc">Writing Unit and UI tests with XCTest, setting up GitHub Actions pipelines, and distributing builds through TestFlight for real-world feedback.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">XCTest</span>
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">TestFlight</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#FF7C00" opacity="0.15"/>
+            <rect width="100" height="100" rx="22" fill="url(#ai_grad)"/>
+            <defs>
+              <linearGradient id="ai_grad" x1="0" y1="0" x2="100" y2="100">
+                <stop offset="0%" stop-color="#FF7C00"/>
+                <stop offset="100%" stop-color="#FF3D00"/>
+              </linearGradient>
+            </defs>
+            <text x="50" y="62" text-anchor="middle" font-size="38" font-weight="900" fill="white" font-family="Georgia, serif" letter-spacing="-2">Ai</text>
+          </svg>
+        </span>
+        <div class="skill-name">Adobe Illustrator</div>
+        <div class="skill-desc">Vector-based design tool for creating app icons, UI mockups, illustrations, and scalable graphics that look sharp on every screen size.</div>
+        <div class="skill-tags"><span class="skill-tag">Vector Design</span><span class="skill-tag">App Icons</span><span class="skill-tag">UI Mockups</span></div>
       </div>
+
       <div class="skill-card reveal">
-        <span class="skill-icon">🛠️</span>
-        <div class="skill-name">Dev Tools</div>
-        <div class="skill-desc">Proficient in Xcode and Instruments for performance profiling and debugging, with Git for version control and collaborative development workflows.</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Xcode</span>
-          <span class="skill-tag">Instruments</span>
-          <span class="skill-tag">Git</span>
-        </div>
+        <span class="skill-icon">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="22" fill="#D97706" opacity="0.15"/>
+            <rect width="100" height="100" rx="22" fill="url(#claude_grad)"/>
+            <defs>
+              <linearGradient id="claude_grad" x1="0" y1="0" x2="100" y2="100">
+                <stop offset="0%" stop-color="#D97706"/>
+                <stop offset="100%" stop-color="#B45309"/>
+              </linearGradient>
+            </defs>
+            <path d="M50 22C34.5 22 22 34.5 22 50C22 65.5 34.5 78 50 78C65.5 78 78 65.5 78 50C78 34.5 65.5 22 50 22ZM50 30C55 30 60 35 60 42C60 47 57 51 53 53L62 70H54L46 55H44V70H37V30H50ZM44 37V48H50C53 48 55 46 55 42C55 39 53 37 50 37H44Z" fill="white"/>
+          </svg>
+        </span>
+        <div class="skill-name">Claude</div>
+        <div class="skill-desc">Anthropic's AI assistant — used for brainstorming app ideas, debugging Swift code, drafting app descriptions, and accelerating development workflows.</div>
+        <div class="skill-tags"><span class="skill-tag">AI Assistant</span><span class="skill-tag">Code Review</span><span class="skill-tag">Brainstorming</span></div>
       </div>
+
     </div>
   </section>
 
@@ -897,16 +913,18 @@
 
       <!-- 1. BS Board -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a3a 0%,#2d1b69 100%);">
-          <img src="App_Icon_SS/1.BS Board.png" alt="BS Board" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🏀</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/bs-board/id1659995687" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a3a 0%,#2d1b69 100%);">
+            <img src="App_Icon_SS/1.BS Board.png" alt="BS Board" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🏀</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 01</div>
           <div class="project-title">BS Board</div>
           <p class="project-desc">A clean, intuitive basketball scoreboard app. Keep track of scores, periods, and game time — all from your pocket during any game.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SwiftUI</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/bs-board/id1659995687" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -915,16 +933,18 @@
 
       <!-- 2. EZ Breathe -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#0a2744 0%,#0c4a6e 100%);">
-          <img src="App_Icon_SS/3.EZ Breathe.png" alt="EZ Breathe" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🌬️</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/ez-breathe-app/id6760581445" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0a2744 0%,#0c4a6e 100%);">
+            <img src="App_Icon_SS/3.EZ Breathe.png" alt="EZ Breathe" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🌬️</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 02</div>
           <div class="project-title">EZ Breathe</div>
           <p class="project-desc">A simple, calming breathing exercise app. Guided breath patterns help users reduce stress and reset their focus — anytime, anywhere.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SwiftUI</span><span class="stack-tag">Animation</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/ez-breathe-app/id6760581445" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -933,16 +953,18 @@
 
       <!-- 3. K13 Piano -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a2e 0%,#3b1f6e 100%);">
-          <img src="App_Icon_SS/4.K13 Piano.png" alt="K13 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎹</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/k13-piano/id6760742525" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a2e 0%,#3b1f6e 100%);">
+            <img src="App_Icon_SS/4.K13 Piano.png" alt="K13 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎹</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 03</div>
           <div class="project-title">K13 Piano</div>
           <p class="project-desc">Your personalized pocket piano. 13 keys in your hand — play melodies, learn chords, and explore music wherever you go.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">AVFoundation</span><span class="stack-tag">SwiftUI</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/k13-piano/id6760742525" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -951,16 +973,18 @@
 
       <!-- 4. K20 Piano -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#1c1233 0%,#4a2080 100%);">
-          <img src="App_Icon_SS/5.K20 Piano.png" alt="K20 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎼</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/k20-piano/id6761089754" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1c1233 0%,#4a2080 100%);">
+            <img src="App_Icon_SS/5.K20 Piano.png" alt="K20 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎼</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 04</div>
           <div class="project-title">K20 Piano</div>
           <p class="project-desc">20 keys, more range, more music. An expanded pocket piano that lets you play fuller melodies and explore a wider musical palette on the go.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">AVFoundation</span><span class="stack-tag">SwiftUI</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/k20-piano/id6761089754" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -969,16 +993,18 @@
 
       <!-- 5. Baseball Snake -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#1a2e1c 0%,#14532d 100%);">
-          <img src="App_Icon_SS/2.Baseball Snaker.png" alt="Baseball Snake" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚾</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/baseball-snake/id6761117819" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a2e1c 0%,#14532d 100%);">
+            <img src="App_Icon_SS/2.Baseball Snaker.png" alt="Baseball Snake" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚾</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 05</div>
           <div class="project-title">Baseball Snake</div>
           <p class="project-desc">The classic Snake game, reimagined with a baseball twist. Collect baseballs, grow your snake, and dodge your own trail in this addictive arcade experience.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SpriteKit</span><span class="stack-tag">GameKit</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/baseball-snake/id6761117819" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -987,16 +1013,18 @@
 
       <!-- 6. Sky Versus -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#0a1628 0%,#0e3a6e 100%);">
-          <img src="App_Icon_SS/6.Sky Versus.png" alt="Sky Versus" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚔️</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/sky-versus/id6761248880" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0a1628 0%,#0e3a6e 100%);">
+            <img src="App_Icon_SS/6.Sky Versus.png" alt="Sky Versus" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚔️</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 06</div>
           <div class="project-title">Sky Versus</div>
           <p class="project-desc">Two players, one device, epic battles in the sky. A local multiplayer combat game where you and a friend fight for aerial dominance on the same screen.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SpriteKit</span><span class="stack-tag">Multiplayer</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/sky-versus/id6761248880" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -1005,16 +1033,18 @@
 
       <!-- 7. We Wall Sit -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a0a 0%,#7c3100 100%);">
-          <img src="App_Icon_SS/7.We Wall Sit.png" alt="We Wall Sit" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🦵</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/we-wall-sit/id6761374182" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a0a 0%,#7c3100 100%);">
+            <img src="App_Icon_SS/7.We Wall Sit.png" alt="We Wall Sit" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🦵</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 07</div>
           <div class="project-title">We Wall Sit</div>
           <p class="project-desc">Build strong legs and a solid core anywhere, anytime. A focused workout timer app for wall sit exercises — no equipment needed, just a wall and determination.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SwiftUI</span><span class="stack-tag">HealthKit</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/we-wall-sit/id6761374182" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -1023,16 +1053,18 @@
 
       <!-- 8. EZ Medication -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
-          <img src="App_Icon_SS/8.EZ TYM.png" alt="EZ Medication" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">💊</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/us/app/ez-medication/id6761795519" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
+            <img src="App_Icon_SS/8.EZ TYM.png" alt="EZ Medication" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">💊</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number">Project 08</div>
           <div class="project-title">EZ Medication</div>
           <p class="project-desc">Never miss a dose. A simple, straightforward medicine reminder app that keeps your health routine on track without unnecessary complexity.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SwiftUI</span><span class="stack-tag">UserNotifications</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <a href="https://apps.apple.com/us/app/ez-medication/id6761795519" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
@@ -1041,7 +1073,7 @@
 
       <!-- 9. GTA Chords -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#2d1b00 0%,#6b3a00 100%);">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2d1b00 0%,#6b3a00 100%);cursor:default;">
           <img src="App_Icon_SS/9.GTR Chords.png" alt="GTA Chords" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
           <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎸</span><span>App Screenshot</span></div>
           <div class="project-thumb-label">iOS App</div>
@@ -1050,7 +1082,7 @@
           <div class="project-number">Project 09</div>
           <div class="project-title">GTA Chords</div>
           <p class="project-desc">The best guitar chord dictionary for new players. Clear diagrams, easy navigation, and a comprehensive chord library — everything a beginner guitarist needs in one app.</p>
-          <div class="project-stack"><span class="stack-tag">Swift</span><span class="stack-tag">SwiftUI</span><span class="stack-tag">AVFoundation</span></div>
+          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
             <span class="project-link" style="opacity:0.4;cursor:default;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
