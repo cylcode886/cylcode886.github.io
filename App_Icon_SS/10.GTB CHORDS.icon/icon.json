@@ -1,0 +1,119 @@
+{
+  "fill" : {
+    "solid" : "extended-gray:0.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "hidden" : true,
+          "image-name" : "c_maj_icon_1024 2.png",
+          "name" : "c_maj_icon_1024 2"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : true,
+          "image-name" : "c_maj_icon_1024_fullbleed.png",
+          "name" : "c_maj_icon_1024_fullbleed",
+          "position" : {
+            "scale" : 0.95,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "fill" : "none",
+          "glass" : false,
+          "hidden" : true,
+          "image-name" : "c_maj_icon_1024_padded.png",
+          "name" : "c_maj_icon_1024_padded",
+          "position" : {
+            "scale" : 1.1,
+            "translation-in-points" : [
+              0,
+              -14.625
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "Logo_White_2.png",
+          "name" : "Logo_White_2",
+          "position" : {
+            "scale" : 0.95,
+            "translation-in-points" : [
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
