@@ -605,6 +605,12 @@
 
     .project-link:hover { color: var(--accent2); }
 
+    .project-link.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
     /* ── CONTACT ── */
     #contact { background: var(--bg); }
 
@@ -859,11 +865,11 @@
     <p class="section-desc reveal">Apps across music, sports, wellness, and games — each one built with Swift and a lot of curiosity.</p>
     <div class="projects-grid">
 
-         <!-- EZ Currency -->
+      <!-- EZ Currency -->
       <div class="project-card reveal">
         <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a1a 0%,#000000 100%);cursor:default;">
           <img src="App_Icon_SS/11.EZCurrencyIcon.png" alt="EZ Currency" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎸</span><span>App Screenshot</span></div>
+          <div class="project-thumb-placeholder"><span style="font-size:3rem;">💱</span><span>App Screenshot</span></div>
           <div class="project-thumb-label">iOS App</div>
         </div>
         <div class="project-body">
@@ -872,20 +878,20 @@
           <p class="project-desc">The fastest and most intuitive currency exchange tool. Real-time conversion, Taiwan Bank cash trading information at a glance, 22 currencies can be freely arranged, the interface is clean and uncluttered, and exchange rate information is clear at a glance.</p>
           <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
           <div class="project-links">
-            <a href="Coming Soon" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
+            <a href="#" class="project-link disabled" onclick="return false;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Coming Soon</a>
           </div>
         </div>
       </div>
-    
 
-      
       <!-- GTB CHORDS -->
       <div class="project-card reveal">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a1a 0%,#000000 100%);cursor:default;">
-          <img src="App_Icon_SS/10.GTB CHORDS Logo.png" alt="GTB CHORDS" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-          <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎸</span><span>App Screenshot</span></div>
-          <div class="project-thumb-label">iOS App</div>
-        </div>
+        <a href="https://apps.apple.com/tw/app/gtb-chords/id6764719857" target="_blank" style="display:block;text-decoration:none;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a1a 0%,#000000 100%);">
+            <img src="App_Icon_SS/10.GTB CHORDS Logo.png" alt="GTB CHORDS" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
+            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎸</span><span>App Screenshot</span></div>
+            <div class="project-thumb-label">iOS App</div>
+          </div>
+        </a>
         <div class="project-body">
           <div class="project-number"></div>
           <div class="project-title">GTB CHORDS</div>
@@ -895,7 +901,6 @@
             <a href="https://apps.apple.com/tw/app/gtb-chords/id6764719857" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
           </div>
         </div>
-      </div>
       </div>
 
       <!-- BS Board -->
@@ -1101,7 +1106,7 @@
       <a href="#home">Top</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-<a href="https://cylcode886.github.io/App-Privacy-Policy/" target="_blank">Privacy Policy</a>
+      <a href="https://cylcode886.github.io/App-Privacy-Policy/" target="_blank">Privacy Policy</a>
     </div>
   </footer>
 
