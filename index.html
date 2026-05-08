@@ -697,37 +697,37 @@
     <p class="section-desc reveal">The tools I use to build, create, and bring ideas to life.</p>
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/xcode_icon.png" alt="Xcode"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/xcode_icon_256x256.png" alt="Xcode"></span>
         <div class="skill-name">Xcode &amp; SwiftUI</div>
         <div class="skill-desc">Apple's primary IDE for building iOS, macOS, and watchOS apps — paired with SwiftUI's declarative framework for crafting beautiful, responsive interfaces.</div>
         <div class="skill-tags"><span class="skill-tag">Swift</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Simulator</span></div>
       </div>
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/protools_icon.png" alt="Avid Pro Tools"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/protools_icon_256x256.png" alt="Avid Pro Tools"></span>
         <div class="skill-name">Avid Pro Tools</div>
         <div class="skill-desc">Industry-standard digital audio workstation for professional recording, mixing, and audio post-production workflows.</div>
         <div class="skill-tags"><span class="skill-tag">Audio Editing</span><span class="skill-tag">Mixing</span><span class="skill-tag">Recording</span></div>
       </div>
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/logicpro_icon.png" alt="Logic Pro"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/logicpro_icon_256x256.png" alt="Logic Pro"></span>
         <div class="skill-name">Logic Pro</div>
         <div class="skill-desc">Apple's professional music production software for composing, arranging, and producing tracks — from sketching ideas to full studio-quality mixes.</div>
         <div class="skill-tags"><span class="skill-tag">Music Production</span><span class="skill-tag">Composition</span><span class="skill-tag">MIDI</span></div>
       </div>
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/finalcutpro_icon.png" alt="Final Cut Pro"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/finalcutpro_icon_256x256.png" alt="Final Cut Pro"></span>
         <div class="skill-name">Final Cut Pro</div>
         <div class="skill-desc">Apple's pro video editing software for cutting, color grading, and delivering polished video content with a fast, magnetic timeline workflow.</div>
         <div class="skill-tags"><span class="skill-tag">Video Editing</span><span class="skill-tag">Color Grading</span><span class="skill-tag">Motion</span></div>
       </div>
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/illustrator_icon.png" alt="Adobe Illustrator"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/illustrator_icon_256x256.png" alt="Adobe Illustrator"></span>
         <div class="skill-name">Adobe Illustrator</div>
         <div class="skill-desc">Vector-based design tool for creating app icons, UI mockups, illustrations, and scalable graphics that look sharp on every screen size.</div>
         <div class="skill-tags"><span class="skill-tag">Vector Design</span><span class="skill-tag">App Icons</span><span class="skill-tag">UI Mockups</span></div>
       </div>
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/claude_icon.png" alt="Claude"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/claude_icon_256x256.png" alt="Claude"></span>
         <div class="skill-name">Claude</div>
         <div class="skill-desc">Anthropic's AI assistant — used for brainstorming app ideas, debugging Swift code, drafting app descriptions, and accelerating development workflows.</div>
         <div class="skill-tags"><span class="skill-tag">AI Assistant</span><span class="skill-tag">Code Review</span><span class="skill-tag">Brainstorming</span></div>
@@ -901,7 +901,7 @@
                   <span style="font-size:3rem;">${p.emoji}</span>
                   <span>App Screenshot</span>
                 </div>
-                <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'">
+                <img src="${p.image}" alt="${p.title}" decoding="async" fetchpriority="${i < 3 ? 'high' : 'auto'}" onerror="this.style.display='none'">
                 <div class="project-thumb-label">iOS App</div>
               </div>
             </a>
