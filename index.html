@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cylcode — iOS Developer</title>
+  <title>cylcode — iOS Developer & Mixing Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="cylcode (YILI CHO) — iOS developer and mixing engineer. Building apps for everyday life with Swift and SwiftUI." />
+  <meta name="author" content="YILI CHO (cylcode)" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="cylcode — iOS Developer" />
+  <meta property="og:description" content="iOS developer and mixing engineer. Building apps for everyday life." />
+  <meta property="og:image" content="Head_pic/cylcode_Banner_pic.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (emoji-based, no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -23,9 +38,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
@@ -34,7 +47,6 @@
       line-height: 1.6;
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -45,7 +57,6 @@
       opacity: 0.5;
     }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -58,7 +69,6 @@
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
-
     .nav-logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
@@ -67,9 +77,7 @@
       text-decoration: none;
       letter-spacing: -0.02em;
     }
-
     .nav-logo span { color: var(--accent); }
-
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
       font-size: 0.88rem;
@@ -82,7 +90,6 @@
     }
     .nav-links a:hover { color: var(--white); }
 
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -91,7 +98,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero-glow {
       position: absolute;
       width: 700px; height: 700px;
@@ -100,7 +106,6 @@
       pointer-events: none;
       animation: pulse 6s ease-in-out infinite;
     }
-
     .hero-glow2 {
       position: absolute;
       width: 400px; height: 400px;
@@ -109,14 +114,12 @@
       pointer-events: none;
       animation: pulse 8s ease-in-out infinite reverse;
     }
-
     @keyframes pulse {
       0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
       50% { transform: scale(1.08) translateY(-20px); opacity: 0.8; }
     }
 
     .hero-content { max-width: 760px; position: relative; z-index: 1; }
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -134,7 +137,6 @@
       opacity: 0;
       animation: fadeUp 0.6s 0.2s ease forwards;
     }
-
     .hero-badge::before {
       content: '';
       width: 7px; height: 7px;
@@ -142,7 +144,6 @@
       border-radius: 50%;
       animation: blink 2s infinite;
     }
-
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
@@ -158,14 +159,12 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.4s ease forwards;
     }
-
     .hero h1 .accent-text {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .hero-sub {
       margin-top: 24px;
       font-size: 1.15rem;
@@ -175,7 +174,6 @@
       opacity: 0;
       animation: fadeUp 0.7s 0.6s ease forwards;
     }
-
     .hero-actions {
       margin-top: 44px;
       display: flex;
@@ -201,13 +199,11 @@
       border: none;
       cursor: pointer;
     }
-
     .btn-primary:hover {
       background: var(--accent2);
       transform: translateY(-2px);
       box-shadow: 0 12px 40px rgba(108,99,255,0.4);
     }
-
     .btn-outline {
       display: inline-flex;
       align-items: center;
@@ -223,36 +219,10 @@
       border: 1px solid var(--border);
       transition: all 0.25s;
     }
-
     .btn-outline:hover {
       border-color: rgba(255,255,255,0.2);
       color: var(--white);
       transform: translateY(-2px);
-    }
-
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 36px; left: 48px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--muted);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0;
-      animation: fadeIn 1s 1.5s ease forwards;
-    }
-
-    .scroll-line {
-      width: 40px; height: 1px;
-      background: linear-gradient(to right, var(--accent), transparent);
-      animation: widthPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes widthPulse {
-      0%, 100% { width: 40px; }
-      50% { width: 70px; }
     }
 
     @keyframes fadeUp {
@@ -260,14 +230,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* ── SECTION BASE ── */
     section { padding: 100px 48px; }
-
     .section-label {
       display: inline-flex;
       align-items: center;
@@ -279,13 +242,11 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-
     .section-label::before {
       content: '';
       width: 20px; height: 1px;
       background: var(--accent);
     }
-
     .section-title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -295,7 +256,6 @@
       line-height: 1.15;
       margin-bottom: 16px;
     }
-
     .section-desc {
       color: var(--muted);
       font-size: 1rem;
@@ -304,9 +264,7 @@
       margin-bottom: 56px;
     }
 
-    /* ── ABOUT ── */
     #about { background: var(--bg2); }
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -314,11 +272,7 @@
       align-items: center;
       max-width: 1100px;
     }
-
-    .about-photo-wrap {
-      position: relative;
-    }
-
+    .about-photo-wrap { position: relative; }
     .about-photo {
       width: 420px;
       height: 420px;
@@ -332,32 +286,17 @@
       overflow: hidden;
       flex-shrink: 0;
     }
-
     @media (max-width: 900px) {
       .about-photo { width: 100%; height: 320px; }
     }
-
-    .about-photo-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    .about-photo-placeholder svg {
-      width: 56px; height: 56px;
-      opacity: 0.3;
-    }
-
     .about-photo::before {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(135deg, rgba(108,99,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
     }
-
     .about-corner {
       position: absolute;
       width: 120px; height: 120px;
@@ -367,49 +306,23 @@
       bottom: -24px; right: -24px;
       z-index: -1;
     }
-
     .about-text p {
       color: var(--muted);
       line-height: 1.8;
       margin-bottom: 20px;
     }
-
     .about-text p strong {
       color: var(--text);
       font-weight: 500;
     }
 
-    .stats-row {
-      display: flex;
-      gap: 40px;
-      margin-top: 40px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-
-    .stat-item { flex: 1; }
-
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--white);
-      display: block;
-    }
-
-    .stat-num span { color: var(--accent); }
-    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
-
-    /* ── SKILLS ── */
     #skills { background: var(--bg); }
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 1100px;
     }
-
     .skill-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -419,7 +332,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .skill-card::before {
       content: '';
       position: absolute;
@@ -429,20 +341,23 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-
     .skill-card:hover::before { opacity: 1; }
     .skill-card:hover {
       border-color: rgba(108,99,255,0.2);
       transform: translateY(-4px);
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
-
     .skill-icon {
       font-size: 1.8rem;
       margin-bottom: 16px;
       display: block;
     }
-
+    .skill-icon img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
     .skill-name {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
@@ -450,20 +365,17 @@
       color: var(--white);
       margin-bottom: 8px;
     }
-
     .skill-desc {
       font-size: 0.85rem;
       color: var(--muted);
       line-height: 1.65;
     }
-
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 16px;
     }
-
     .skill-tag {
       background: rgba(108,99,255,0.1);
       border: 1px solid rgba(108,99,255,0.2);
@@ -474,16 +386,13 @@
       font-weight: 500;
     }
 
-    /* ── PROJECTS ── */
     #projects { background: var(--bg2); }
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
       max-width: 1100px;
     }
-
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -491,18 +400,21 @@
       overflow: hidden;
       transition: all 0.3s;
       cursor: default;
+      display: flex;
+      flex-direction: column;
     }
-
     .project-card:hover {
       border-color: rgba(108,99,255,0.25);
       transform: translateY(-6px);
       box-shadow: 0 24px 80px rgba(0,0,0,0.5);
     }
-
+    .project-thumb-link {
+      display: block;
+      text-decoration: none;
+    }
     .project-thumb {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -510,13 +422,26 @@
       overflow: hidden;
       cursor: pointer;
     }
-
-    .project-thumb-icon {
-      font-size: 3.5rem;
-      opacity: 0.6;
-      filter: drop-shadow(0 0 20px rgba(108,99,255,0.4));
+    .project-thumb-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      z-index: 0;
     }
-
+    .project-thumb img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
     .project-thumb-label {
       position: absolute;
       top: 14px; right: 14px;
@@ -528,20 +453,14 @@
       font-size: 0.72rem;
       color: var(--text);
       font-weight: 500;
+      z-index: 2;
     }
-
-    .project-thumb-placeholder {
+    .project-body {
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.2);
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
+      flex: 1;
     }
-
-    .project-body { padding: 24px; }
-
     .project-number {
       font-family: 'Syne', sans-serif;
       font-size: 0.72rem;
@@ -551,7 +470,6 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-
     .project-title {
       font-family: 'Syne', sans-serif;
       font-size: 1.2rem;
@@ -560,21 +478,19 @@
       margin-bottom: 10px;
       letter-spacing: -0.01em;
     }
-
     .project-desc {
       font-size: 0.875rem;
       color: var(--muted);
       line-height: 1.7;
       margin-bottom: 18px;
+      flex: 1;
     }
-
     .project-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-bottom: 20px;
     }
-
     .stack-tag {
       background: rgba(34,197,94,0.1);
       border: 1px solid rgba(34,197,94,0.25);
@@ -586,12 +502,10 @@
       cursor: default;
       user-select: none;
     }
-
     .project-links {
       display: flex;
       gap: 12px;
     }
-
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -602,18 +516,13 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
     .project-link:hover { color: var(--accent2); }
-
-    .project-link.disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      pointer-events: none;
+    .project-link svg {
+      width: 14px;
+      height: 14px;
     }
 
-    /* ── CONTACT ── */
     #contact { background: var(--bg); }
-
     .contact-wrap {
       max-width: 720px;
       background: var(--card);
@@ -623,7 +532,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .contact-wrap::before {
       content: '';
       position: absolute;
@@ -631,14 +539,21 @@
       background: radial-gradient(ellipse at top left, rgba(108,99,255,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
-
+    .contact-intro {
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 480px;
+      position: relative;
+      z-index: 1;
+    }
     .contact-links {
       display: flex;
       flex-direction: column;
       gap: 16px;
       margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
-
     .contact-item {
       display: flex;
       align-items: center;
@@ -650,13 +565,11 @@
       text-decoration: none;
       transition: all 0.25s;
     }
-
     .contact-item:hover {
       border-color: rgba(108,99,255,0.3);
       background: rgba(108,99,255,0.06);
       transform: translateX(4px);
     }
-
     .contact-icon {
       width: 40px; height: 40px;
       background: rgba(108,99,255,0.12);
@@ -667,9 +580,7 @@
       font-size: 1.1rem;
       flex-shrink: 0;
     }
-
     .contact-info { flex: 1; }
-
     .contact-label {
       font-size: 0.75rem;
       color: var(--muted);
@@ -677,23 +588,19 @@
       letter-spacing: 0.06em;
       font-weight: 500;
     }
-
     .contact-value {
       font-size: 0.95rem;
       color: var(--text);
       font-weight: 400;
       margin-top: 2px;
     }
-
     .contact-arrow {
       color: var(--muted);
       font-size: 1.1rem;
       transition: color 0.2s;
     }
-
     .contact-item:hover .contact-arrow { color: var(--accent2); }
 
-    /* ── FOOTER ── */
     footer {
       padding: 32px 48px;
       border-top: 1px solid var(--border);
@@ -701,41 +608,30 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .footer-text {
       font-size: 0.82rem;
       color: var(--muted);
     }
-
     .footer-text span { color: var(--accent); }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
+    .footer-links { display: flex; gap: 24px; }
     .footer-links a {
       font-size: 0.82rem;
       color: var(--muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-
     .footer-links a:hover { color: var(--white); }
 
-    /* ── SCROLL ANIMATIONS ── */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
     .reveal.visible {
       opacity: 1;
       transform: none;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
@@ -747,16 +643,13 @@
       .skills-grid { grid-template-columns: 1fr; }
       .contact-wrap { padding: 32px 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
-      .stats-row { gap: 20px; }
-      .hero-scroll-hint { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">cylcode<span>.</span></a>
+    <a href="#home" class="nav-logo">cylcode<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -765,32 +658,28 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-glow"></div>
     <div class="hero-glow2"></div>
     <div class="hero-content">
       <div class="hero-badge">iOS Developer</div>
       <h1>Building Apps<br />for <span class="accent-text">Everyday</span><br />Life</h1>
-      <p class="hero-sub"></p>
+      <p class="hero-sub">Swift &amp; SwiftUI apps across music, sports, wellness, and games — designed simple, built to be useful every day.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">
           View Portfolio
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
     </div>
-
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
         <div class="about-photo">
           <img src="Head_pic/cylcode_Banner_pic.png" alt="cylcode" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:var(--radius);">
-          <div class="about-photo-placeholder" style="display:none;"></div>
         </div>
         <div class="about-corner"></div>
       </div>
@@ -798,286 +687,71 @@
         <div class="section-label">About Me</div>
         <h2 class="section-title">Hi, I'm YILI CHO (cylcode)</h2>
         <p>As an iOS developer and mixing engineer, I blend creativity with functionality in both app development and music production.</p>
-
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <div class="section-label reveal">Skills</div>
     <h2 class="section-title reveal">What I Work With</h2>
     <p class="section-desc reveal">The tools I use to build, create, and bring ideas to life.</p>
     <div class="skills-grid">
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/xcode_icon.png" alt="Xcode" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
-        <div class="skill-name">Xcode & SwiftUI</div>
+        <span class="skill-icon"><img src="LOGO_ICON/xcode_icon.png" alt="Xcode"></span>
+        <div class="skill-name">Xcode &amp; SwiftUI</div>
         <div class="skill-desc">Apple's primary IDE for building iOS, macOS, and watchOS apps — paired with SwiftUI's declarative framework for crafting beautiful, responsive interfaces.</div>
         <div class="skill-tags"><span class="skill-tag">Swift</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Simulator</span></div>
       </div>
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/protools_icon.png" alt="Avid Pro Tools" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/protools_icon.png" alt="Avid Pro Tools"></span>
         <div class="skill-name">Avid Pro Tools</div>
         <div class="skill-desc">Industry-standard digital audio workstation for professional recording, mixing, and audio post-production workflows.</div>
         <div class="skill-tags"><span class="skill-tag">Audio Editing</span><span class="skill-tag">Mixing</span><span class="skill-tag">Recording</span></div>
       </div>
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/logicpro_icon.png" alt="Logic Pro" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/logicpro_icon.png" alt="Logic Pro"></span>
         <div class="skill-name">Logic Pro</div>
         <div class="skill-desc">Apple's professional music production software for composing, arranging, and producing tracks — from sketching ideas to full studio-quality mixes.</div>
         <div class="skill-tags"><span class="skill-tag">Music Production</span><span class="skill-tag">Composition</span><span class="skill-tag">MIDI</span></div>
       </div>
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/finalcutpro_icon.png" alt="Final Cut Pro" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/finalcutpro_icon.png" alt="Final Cut Pro"></span>
         <div class="skill-name">Final Cut Pro</div>
         <div class="skill-desc">Apple's pro video editing software for cutting, color grading, and delivering polished video content with a fast, magnetic timeline workflow.</div>
         <div class="skill-tags"><span class="skill-tag">Video Editing</span><span class="skill-tag">Color Grading</span><span class="skill-tag">Motion</span></div>
       </div>
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/illustrator_icon.png" alt="Adobe Illustrator" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/illustrator_icon.png" alt="Adobe Illustrator"></span>
         <div class="skill-name">Adobe Illustrator</div>
         <div class="skill-desc">Vector-based design tool for creating app icons, UI mockups, illustrations, and scalable graphics that look sharp on every screen size.</div>
         <div class="skill-tags"><span class="skill-tag">Vector Design</span><span class="skill-tag">App Icons</span><span class="skill-tag">UI Mockups</span></div>
       </div>
-
       <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/claude_icon.png" alt="Claude" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></span>
+        <span class="skill-icon"><img src="LOGO_ICON/claude_icon.png" alt="Claude"></span>
         <div class="skill-name">Claude</div>
         <div class="skill-desc">Anthropic's AI assistant — used for brainstorming app ideas, debugging Swift code, drafting app descriptions, and accelerating development workflows.</div>
         <div class="skill-tags"><span class="skill-tag">AI Assistant</span><span class="skill-tag">Code Review</span><span class="skill-tag">Brainstorming</span></div>
       </div>
-
     </div>
   </section>
 
-  <!-- PROJECTS
-       💡 To add a new project: copy any .project-card block and paste it AT THE TOP of .projects-grid.
-       The "Project NN" number is auto-generated by JavaScript — you don't need to renumber anything.
+  <!--
+    PROJECTS — data-driven render.
+    To add a new project: scroll to the <script> below and add a new
+    object at the TOP of the `projects` array. Numbers auto-generate.
   -->
   <section id="projects">
     <div class="section-label reveal">Portfolio</div>
     <h2 class="section-title reveal">iOS App Projects</h2>
     <p class="section-desc reveal">Apps across music, sports, wellness, and games — each one built with Swift and a lot of curiosity.</p>
-    <div class="projects-grid">
-
-   <!-- EZ Currency -->
-<div class="project-card reveal">
-  <a href="https://apps.apple.com/us/app/ez-currency/id6766535653" target="_blank" style="display:block;text-decoration:none;">
-    <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a1a 0%,#000000 100%);">
-      <img src="App_Icon_SS/11.EZCurrencyIcon.png" alt="EZ Currency" style="width:100%;height:100%;object-fit:cover;">
-      <div class="project-thumb-label">iOS App</div>
-    </div>
-  </a>
-  <div class="project-body">
-    <div class="project-number"></div>
-    <div class="project-title">EZ Currency</div>
-    <p class="project-desc">The fastest and most intuitive currency exchange tool...</p>
-    <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-    <div class="project-links">
-      <a href="https://apps.apple.com/us/app/ez-currency/id6766535653" target="_blank" class="project-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        App Store
-      </a>
-    </div>
-  </div>
-</div>
-
-      <!-- GTB CHORDS -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/tw/app/gtb-chords/id6764719857" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a1a 0%,#000000 100%);">
-            <img src="App_Icon_SS/10.GTB CHORDS Logo.png" alt="GTB CHORDS" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎸</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">GTB CHORDS</div>
-          <p class="project-desc">Full guitar scale, interval, circle of fifths, Diatonic Chords, Neck Notes, and Metronome functions are available.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/tw/app/gtb-chords/id6764719857" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-            <!-- We Wall Sit -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/we-wall-sit/id6761374182" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a0a 0%,#7c3100 100%);">
-            <img src="App_Icon_SS/7.We Wall Sit.png" alt="We Wall Sit" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🦵</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">We Wall Sit</div>
-          <p class="project-desc">Build strong legs and a solid core anywhere, anytime. A focused workout timer app for wall sit exercises — no equipment needed, just a wall and determination.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/we-wall-sit/id6761374182" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-      
-
-      <!-- BS Board -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/bs-board/id1659995687" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a3a 0%,#2d1b69 100%);">
-            <img src="App_Icon_SS/1.BS Board.png" alt="BS Board" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🏀</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">BS Board</div>
-          <p class="project-desc">A clean, intuitive basketball scoreboard app. Keep track of scores, periods, and game time — all from your pocket during any game.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/bs-board/id1659995687" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- EZ Breathe -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/ez-breathe-app/id6760581445" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0a2744 0%,#0c4a6e 100%);">
-            <img src="App_Icon_SS/3.EZ Breathe.png" alt="EZ Breathe" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🌬️</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">EZ Breathe</div>
-          <p class="project-desc">A simple, calming breathing exercise app. Guided breath patterns help users reduce stress and reset their focus — anytime, anywhere.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/ez-breathe-app/id6760581445" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- K13 Piano -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/k13-piano/id6760742525" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a2e 0%,#3b1f6e 100%);">
-            <img src="App_Icon_SS/4.K13 Piano.png" alt="K13 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎹</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">K13 Piano</div>
-          <p class="project-desc">Your personalized pocket piano. 13 keys in your hand — play melodies, learn chords, and explore music wherever you go.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/k13-piano/id6760742525" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- K20 Piano -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/k20-piano/id6761089754" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1c1233 0%,#4a2080 100%);">
-            <img src="App_Icon_SS/5.K20 Piano.png" alt="K20 Piano" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">🎼</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">K20 Piano</div>
-          <p class="project-desc">20 keys, more range, more music. An expanded pocket piano that lets you play fuller melodies and explore a wider musical palette on the go.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/k20-piano/id6761089754" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Baseball Snake -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/baseball-snake/id6761117819" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a2e1c 0%,#14532d 100%);">
-            <img src="App_Icon_SS/2.Baseball Snaker.png" alt="Baseball Snake" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚾</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">Baseball Snake</div>
-          <p class="project-desc">The classic Snake game, reimagined with a baseball twist. Collect baseballs, grow your snake, and dodge your own trail in this addictive arcade experience.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/baseball-snake/id6761117819" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sky Versus -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/sky-versus/id6761248880" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0a1628 0%,#0e3a6e 100%);">
-            <img src="App_Icon_SS/6.Sky Versus.png" alt="Sky Versus" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">⚔️</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">Sky Versus</div>
-          <p class="project-desc">Two players, one device, epic battles in the sky. A local multiplayer combat game where you and a friend fight for aerial dominance on the same screen.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/sky-versus/id6761248880" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- EZ Medication -->
-      <div class="project-card reveal">
-        <a href="https://apps.apple.com/us/app/ez-medication/id6761795519" target="_blank" style="display:block;text-decoration:none;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
-            <img src="App_Icon_SS/8.EZ TYM.png" alt="EZ Medication" style="width:100%;height:100%;object-fit:cover;display:none;" onerror="this.style.display='none'" onload="this.style.display='block';this.parentElement.querySelector('.project-thumb-placeholder').style.display='none'">
-            <div class="project-thumb-placeholder"><span style="font-size:3rem;">💊</span><span>App Screenshot</span></div>
-            <div class="project-thumb-label">iOS App</div>
-          </div>
-        </a>
-        <div class="project-body">
-          <div class="project-number"></div>
-          <div class="project-title">EZ Medication</div>
-          <p class="project-desc">Never miss a dose. A simple, straightforward medicine reminder app that keeps your health routine on track without unnecessary complexity.</p>
-          <div class="project-stack"><span class="stack-tag">Xcode</span><span class="stack-tag">SwiftUI</span></div>
-          <div class="project-links">
-            <a href="https://apps.apple.com/us/app/ez-medication/id6761795519" target="_blank" class="project-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>App Store</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="section-label reveal">Contact</div>
     <h2 class="section-title reveal">Let's Connect</h2>
     <div class="contact-wrap reveal">
-      <p style="color:var(--muted);line-height:1.75;max-width:480px;">
+      <p class="contact-intro">
         Whether it's a collaboration, a project idea, or just a chat about iOS development and music — feel free to reach out anytime.
       </p>
       <div class="contact-links">
@@ -1089,9 +763,9 @@
           </div>
           <span class="contact-arrow">→</span>
         </a>
-        <a href="https://github.com/cylcode886" target="_blank" class="contact-item">
+        <a href="https://github.com/cylcode886" target="_blank" rel="noopener noreferrer" class="contact-item">
           <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent2)"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent2)" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
           </div>
           <div class="contact-info">
             <div class="contact-label">GitHub</div>
@@ -1103,33 +777,159 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-text">
-      © 2025 <span>cylcode</span> — iOS Developer
+      © <span id="footerYear"></span> <span>cylcode</span> — iOS Developer
     </div>
     <div class="footer-links">
       <a href="#home">Top</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="https://cylcode886.github.io/App-Privacy-Policy/" target="_blank">Privacy Policy</a>
+      <a href="https://cylcode886.github.io/App-Privacy-Policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
     </div>
   </footer>
 
   <script>
-    // ── AUTO-NUMBER PROJECTS ──
-    // Project numbers are calculated automatically from DOM order.
-    // To add a new project: copy any .project-card block in #projects .projects-grid
-    // and paste it where you want it to appear (top = newest = Project 01).
-    // No manual renumbering needed.
-    const projectNumbers = document.querySelectorAll('#projects .project-number');
-    projectNumbers.forEach((el, i) => {
-      const num = String(i + 1).padStart(2, '0');
-      el.textContent = `Project ${num}`;
-    });
+    // ════════════════════════════════════════════════════════════════
+    // PROJECTS DATA
+    // To add a new project: paste a new object at the TOP of this array.
+    // Numbers auto-generate. No HTML editing needed.
+    //
+    // Filenames with spaces are URL-encoded (%20) below so they work
+    // reliably on GitHub Pages. Long-term, consider renaming files
+    // to use underscores or dashes instead of spaces.
+    // ════════════════════════════════════════════════════════════════
+    const projects = [
+      {
+        title: 'EZ Currency',
+        url: 'https://apps.apple.com/us/app/ez-currency/id6766535653',
+        image: 'App_Icon_SS/11.EZCurrencyIcon.png',
+        emoji: '💱',
+        gradient: 'linear-gradient(135deg,#1a1a1a 0%,#000000 100%)',
+        desc: 'The fastest and most intuitive currency exchange tool — convert between world currencies with real-time rates, all in a clean, no-frills interface.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'GTB CHORDS',
+        url: 'https://apps.apple.com/tw/app/gtb-chords/id6764719857',
+        image: 'App_Icon_SS/10.GTB%20CHORDS%20Logo.png',
+        emoji: '🎸',
+        gradient: 'linear-gradient(135deg,#1a1a1a 0%,#000000 100%)',
+        desc: 'Full guitar scale, interval, circle of fifths, Diatonic Chords, Neck Notes, and Metronome functions are available.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'We Wall Sit',
+        url: 'https://apps.apple.com/us/app/we-wall-sit/id6761374182',
+        image: 'App_Icon_SS/7.We%20Wall%20Sit.png',
+        emoji: '🦵',
+        gradient: 'linear-gradient(135deg,#2a1a0a 0%,#7c3100 100%)',
+        desc: 'Build strong legs and a solid core anywhere, anytime. A focused workout timer app for wall sit exercises — no equipment needed, just a wall and determination.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'BS Board',
+        url: 'https://apps.apple.com/us/app/bs-board/id1659995687',
+        image: 'App_Icon_SS/1.BS%20Board.png',
+        emoji: '🏀',
+        gradient: 'linear-gradient(135deg,#1a1a3a 0%,#2d1b69 100%)',
+        desc: 'A clean, intuitive basketball scoreboard app. Keep track of scores, periods, and game time — all from your pocket during any game.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'EZ Breathe',
+        url: 'https://apps.apple.com/us/app/ez-breathe-app/id6760581445',
+        image: 'App_Icon_SS/3.EZ%20Breathe.png',
+        emoji: '🌬️',
+        gradient: 'linear-gradient(135deg,#0a2744 0%,#0c4a6e 100%)',
+        desc: 'A simple, calming breathing exercise app. Guided breath patterns help users reduce stress and reset their focus — anytime, anywhere.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'K13 Piano',
+        url: 'https://apps.apple.com/us/app/k13-piano/id6760742525',
+        image: 'App_Icon_SS/4.K13%20Piano.png',
+        emoji: '🎹',
+        gradient: 'linear-gradient(135deg,#1a1a2e 0%,#3b1f6e 100%)',
+        desc: 'Your personalized pocket piano. 13 keys in your hand — play melodies, learn chords, and explore music wherever you go.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'K20 Piano',
+        url: 'https://apps.apple.com/us/app/k20-piano/id6761089754',
+        image: 'App_Icon_SS/5.K20%20Piano.png',
+        emoji: '🎼',
+        gradient: 'linear-gradient(135deg,#1c1233 0%,#4a2080 100%)',
+        desc: '20 keys, more range, more music. An expanded pocket piano that lets you play fuller melodies and explore a wider musical palette on the go.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'Baseball Snake',
+        url: 'https://apps.apple.com/us/app/baseball-snake/id6761117819',
+        image: 'App_Icon_SS/2.Baseball%20Snake.png',
+        emoji: '⚾',
+        gradient: 'linear-gradient(135deg,#1a2e1c 0%,#14532d 100%)',
+        desc: 'The classic Snake game, reimagined with a baseball twist. Collect baseballs, grow your snake, and dodge your own trail in this addictive arcade experience.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'Sky Versus',
+        url: 'https://apps.apple.com/us/app/sky-versus/id6761248880',
+        image: 'App_Icon_SS/6.Sky%20Versus.png',
+        emoji: '⚔️',
+        gradient: 'linear-gradient(135deg,#0a1628 0%,#0e3a6e 100%)',
+        desc: 'Two players, one device, epic battles in the sky. A local multiplayer combat game where you and a friend fight for aerial dominance on the same screen.',
+        stack: ['Xcode', 'SwiftUI']
+      },
+      {
+        title: 'EZ Medication',
+        url: 'https://apps.apple.com/us/app/ez-medication/id6761795519',
+        image: 'App_Icon_SS/8.EZ%20TYM.png',
+        emoji: '💊',
+        gradient: 'linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%)',
+        desc: 'Never miss a dose. A simple, straightforward medicine reminder app that keeps your health routine on track without unnecessary complexity.',
+        stack: ['Xcode', 'SwiftUI']
+      }
+    ];
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
+    function renderProjects() {
+      const grid = document.getElementById('projectsGrid');
+      const html = projects.map((p, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const stackTags = p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('');
+        return `
+          <div class="project-card reveal">
+            <a class="project-thumb-link" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="Open ${p.title} on the App Store">
+              <div class="project-thumb" style="background:${p.gradient};">
+                <div class="project-thumb-placeholder">
+                  <span style="font-size:3rem;">${p.emoji}</span>
+                  <span>App Screenshot</span>
+                </div>
+                <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'">
+                <div class="project-thumb-label">iOS App</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-number">Project ${num}</div>
+              <div class="project-title">${p.title}</div>
+              <p class="project-desc">${p.desc}</p>
+              <div class="project-stack">${stackTags}</div>
+              <div class="project-links">
+                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                  </svg>
+                  App Store
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      grid.innerHTML = html;
+      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -1137,9 +937,11 @@
         }
       });
     }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
 
-    // Smooth nav link highlight
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    renderProjects();
+
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => {
@@ -1151,6 +953,8 @@
         a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--white)' : '';
       });
     });
+
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
