@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cylcode — iOS Developer & Mixing Engineer</title>
+  <title>cylcode — iOS &amp; macOS Developer & Mixing Engineer</title>
 
   <!-- SEO -->
-  <meta name="description" content="cylcode (YILI CHO) — iOS developer and mixing engineer. Building apps for everyday life with Swift and SwiftUI." />
+  <meta name="description" content="cylcode (YILI CHO) — iOS and macOS developer and mixing engineer. Building apps for everyday life with Swift and SwiftUI." />
   <meta name="author" content="YILI CHO (cylcode)" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="cylcode — iOS Developer" />
-  <meta property="og:description" content="iOS developer and mixing engineer. Building apps for everyday life." />
+  <meta property="og:title" content="cylcode — iOS &amp; macOS Developer" />
+  <meta property="og:description" content="iOS and macOS developer and mixing engineer. Building apps for everyday life." />
   <meta property="og:image" content="Head_pic/cylcode_Banner_pic_1200x675.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -645,6 +645,28 @@
       .contact-wrap { padding: 32px 24px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
     }
+
+    /* Projects: preserve the existing cards and add platform selection. */
+    #projects .section-desc { margin-bottom: 24px; }
+    .project-filters { display: inline-flex; flex-wrap: wrap; gap: 5px; padding: 5px; border: 1px solid var(--border); border-radius: 50px; background: var(--card); }
+    .project-filter { font: inherit; font-size: 0.9rem; font-weight: 500; color: #aaa7bd; background: transparent; border: 0; border-radius: 50px; min-height: 42px; padding: 8px 22px; cursor: pointer; }
+    .project-filter[aria-pressed="true"] { background: var(--accent); color: white; }
+    .project-filter:hover { color: white; }
+    .project-filter:focus-visible, .project-link:focus-visible, .project-thumb-link:focus-visible { outline: 3px solid var(--accent2); outline-offset: 4px; }
+    .project-count { font-size: 0.875rem; color: #aaa7bd; margin: 14px 0 28px; }
+    .project-card[hidden] { display: none !important; }
+    .project-thumb-static .project-thumb { cursor: default; }
+    .project-thumb.project-thumb-icon img { width: 44%; height: 76%; object-fit: contain; filter: drop-shadow(0 12px 20px rgba(0,0,0,.3)); }
+    .project-thumb-label { font-size: 0.75rem; }
+    .project-thumb-label.platform-mac { border-color: rgba(56,189,248,.3); color: #a5e3ff; }
+    .project-status { display: inline-flex; align-items: center; gap: 8px; color: #b8b3ce; font-size: 0.875rem; }
+    .project-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
+    .project-links { margin-top: auto; min-height: 24px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal, .hero-badge, .hero h1, .hero-sub, .hero-actions { opacity: 1; transform: none; animation: none; transition: none; }
+      .hero-glow, .hero-glow2, .hero-badge::before { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -663,9 +685,9 @@
     <div class="hero-glow"></div>
     <div class="hero-glow2"></div>
     <div class="hero-content">
-      <div class="hero-badge">iOS Developer</div>
+      <div class="hero-badge">iOS &amp; macOS Developer</div>
       <h1>Building Apps<br />for <span class="accent-text">Everyday</span><br />Life</h1>
-      <p class="hero-sub">Swift &amp; SwiftUI apps across music, sports, wellness, and games — designed simple, built to be useful every day.</p>
+      <p class="hero-sub">Apps for iPhone and Mac across productivity, music, sports, wellness, and games — designed simple, built to be useful every day.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">
           View Portfolio
@@ -687,7 +709,7 @@
       <div class="about-text reveal">
         <div class="section-label">About Me</div>
         <h2 class="section-title">Hi, I'm YILI CHO (cylcode)</h2>
-        <p>As an iOS developer and mixing engineer, I blend creativity with functionality in both app development and music production.</p>
+        <p>As an iOS and macOS developer and mixing engineer, I blend creativity with functionality in both app development and music production.</p>
       </div>
     </div>
   </section>
@@ -743,8 +765,14 @@
   -->
   <section id="projects">
     <div class="section-label reveal">Portfolio</div>
-    <h2 class="section-title reveal">iOS App Projects</h2>
-    <p class="section-desc reveal">Apps across music, sports, wellness, and games — each one built with Swift and a lot of curiosity.</p>
+    <h2 class="section-title reveal">App Projects</h2>
+    <p class="section-desc reveal">Apps for iPhone and Mac — from everyday tools to music, sports, wellness, and games.</p>
+    <div class="project-filters reveal" role="group" aria-label="Filter projects by platform">
+      <button type="button" class="project-filter" data-filter="all" aria-pressed="true" aria-controls="projectsGrid">All</button>
+      <button type="button" class="project-filter" data-filter="iOS" aria-pressed="false" aria-controls="projectsGrid">iOS</button>
+      <button type="button" class="project-filter" data-filter="macOS" aria-pressed="false" aria-controls="projectsGrid">macOS</button>
+    </div>
+    <p id="projectCount" class="project-count" role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="projects-grid" id="projectsGrid"></div>
   </section>
 
@@ -753,7 +781,7 @@
     <h2 class="section-title reveal">Let's Connect</h2>
     <div class="contact-wrap reveal">
       <p class="contact-intro">
-        Whether it's a collaboration, a project idea, or just a chat about iOS development and music — feel free to reach out anytime.
+        Whether it's a collaboration, a project idea, or just a chat about iOS and macOS development and music — feel free to reach out anytime.
       </p>
       <div class="contact-links">
         <a href="mailto:cylcode@icloud.com" class="contact-item">
@@ -780,7 +808,7 @@
 
   <footer>
     <div class="footer-text">
-      © <span id="footerYear"></span> <span>cylcode</span> — iOS Developer
+      © <span id="footerYear"></span> <span>cylcode</span> — iOS &amp; macOS Developer
     </div>
     <div class="footer-links">
       <a href="#home">Top</a>
@@ -797,6 +825,19 @@
     // Numbers auto-generate. No HTML editing needed.
     // ════════════════════════════════════════════════════════════════
     const projects = [
+      {
+        title: 'EZ Screen Recorder',
+        platform: 'macOS',
+        // Add the real App Store URL here when the app is available.
+        url: null,
+        status: 'Coming soon',
+        image: 'https://cylcode886.github.io/App_Icon_SS/EZ%20Screen%20Recorder%20IC-iOS-Default-256x256%402x_2.png',
+        imageType: 'icon',
+        emoji: '🎬',
+        gradient: 'linear-gradient(135deg,#141c20 0%,#0b0f14 100%)',
+        desc: 'Record your screen, audio, and camera on your Mac. Keep recordings stored locally, then share or back them up with the tools you choose.',
+        stack: ['macOS', 'Screen Recording', 'Local Storage']
+      },
       {
         title: 'EZ Currency',
         url: 'https://apps.apple.com/us/app/ez-currency/id6766535653',
@@ -880,43 +921,69 @@
       }
     ];
 
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[char]);
+    }
+
     function renderProjects() {
       const grid = document.getElementById('projectsGrid');
-      const html = projects.map((p, i) => {
+      grid.innerHTML = projects.map((p, i) => {
         const num = String(i + 1).padStart(2, '0');
-        const stackTags = p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('');
+        const platform = p.platform || 'iOS';
+        const title = escapeHTML(p.title);
+        const stackTags = p.stack.map(s => `<span class="stack-tag">${escapeHTML(s)}</span>`).join('');
+        const thumb = `
+          <div class="project-thumb ${p.imageType === 'icon' ? 'project-thumb-icon' : ''}" style="background:${p.gradient};">
+            <div class="project-thumb-placeholder" aria-hidden="true">
+              <span style="font-size:3rem;">${p.emoji}</span>
+            </div>
+            <img src="${escapeHTML(p.image)}" alt="${title}" decoding="async" fetchpriority="${i < 3 ? 'high' : 'auto'}" onerror="this.style.display='none'">
+            <div class="project-thumb-label ${platform === 'macOS' ? 'platform-mac' : ''}">${platform} App</div>
+          </div>`;
+        const storeLink = p.url ? `
+          <a href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+            </svg>
+            ${platform === 'macOS' ? 'Mac App Store' : 'App Store'}
+          </a>` : `<span class="project-status">${escapeHTML(p.status || 'Coming soon')}</span>`;
         return `
-          <div class="project-card reveal">
-            <a class="project-thumb-link" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="Open ${p.title} on the App Store">
-              <div class="project-thumb" style="background:${p.gradient};">
-                <div class="project-thumb-placeholder">
-                  <span style="font-size:3rem;">${p.emoji}</span>
-                  <span>App Screenshot</span>
-                </div>
-                <img src="${p.image}" alt="${p.title}" decoding="async" fetchpriority="${i < 3 ? 'high' : 'auto'}" onerror="this.style.display='none'">
-                <div class="project-thumb-label">iOS App</div>
-              </div>
-            </a>
+          <article class="project-card reveal" data-project-platform="${platform}" aria-labelledby="project-title-${i}">
+            ${p.url ? `<a class="project-thumb-link" href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${title} on the App Store">${thumb}</a>` : `<div class="project-thumb-static">${thumb}</div>`}
             <div class="project-body">
               <div class="project-number">Project ${num}</div>
-              <div class="project-title">${p.title}</div>
-              <p class="project-desc">${p.desc}</p>
+              <h3 class="project-title" id="project-title-${i}">${title}</h3>
+              <p class="project-desc">${escapeHTML(p.desc)}</p>
               <div class="project-stack">${stackTags}</div>
-              <div class="project-links">
-                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="project-link">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-                  </svg>
-                  App Store
-                </a>
-              </div>
+              <div class="project-links">${storeLink}</div>
             </div>
-          </div>
-        `;
+          </article>`;
       }).join('');
-      grid.innerHTML = html;
       grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      filterProjects('all', false);
     }
+
+    function filterProjects(platform, revealImmediately = true) {
+      let count = 0;
+      document.querySelectorAll('[data-project-platform]').forEach(card => {
+        const show = platform === 'all' || card.dataset.projectPlatform === platform;
+        card.hidden = !show;
+        if (show) {
+          count++;
+          if (revealImmediately) card.classList.add('visible');
+        }
+      });
+      document.querySelectorAll('.project-filter').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.filter === platform));
+      });
+      document.getElementById('projectCount').textContent = `${count} ${count === 1 ? 'project' : 'projects'} · ${platform === 'all' ? 'iOS & macOS' : platform}`;
+    }
+
+    document.querySelectorAll('.project-filter').forEach(button => {
+      button.addEventListener('click', () => filterProjects(button.dataset.filter));
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
