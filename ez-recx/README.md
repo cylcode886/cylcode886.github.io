@@ -2,6 +2,14 @@
 
 更新日期：2026-09-14。本次四語更新已在本機完成並測試，尚未上傳 GitHub。
 
+## 語言選單修正版（2026-09-14 晚間）
+
+已補上 CSS／JavaScript 的內容版本號，以及隨 HTML 一起載入的選單關鍵樣式。下拉選單明確採單欄垂直排列，不依賴瀏覽器預設樣式。
+
+已在本機 Google Chrome 與 Safari 確認繁中選單正常；Chrome 另確認英文、簡中、日文選單。也以原本單語版的舊 CSS、移除 JavaScript 的測試頁確認選單仍能垂直開合。
+
+既有網站只需將 `EZ-RecX-Menu-Fix.zip` 解壓縮後的 6 個檔案，上傳到 GitHub 原本的 `ez-recx` 資料夾內覆蓋同名檔案。不要上傳到個人網站根目錄；不需要刪除任何資料夾或重傳圖片。修正尚未代為部署。
+
 ## 上傳到既有 GitHub Pages
 
 1. 解壓縮 `EZ-RecX-Website-4-Languages.zip`，取得 `ez-recx` 資料夾。
