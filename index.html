@@ -3,31 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cylcode — iOS &amp; macOS Developer & Mixing Engineer</title>
+  <title>cylcode — iOS &amp; macOS Developer &amp; Mixing Engineer</title>
 
   <!-- SEO -->
-  <meta name="description" content="cylcode (YILI CHO) — iOS and macOS developer and mixing engineer. Building apps for everyday life with Swift and SwiftUI." />
+  <meta
+    name="description"
+    content="cylcode (YILI CHO) — iOS and macOS developer and mixing engineer. Building apps for everyday life with Swift and SwiftUI."
+  />
   <meta name="author" content="YILI CHO (cylcode)" />
+  <link rel="canonical" href="https://cylcode886.github.io/" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cylcode886.github.io/" />
   <meta property="og:title" content="cylcode — iOS &amp; macOS Developer" />
-  <meta property="og:description" content="iOS and macOS developer and mixing engineer. Building apps for everyday life." />
-  <meta property="og:image" content="Head_pic/cylcode_Banner_pic_1200x675.png" />
+  <meta
+    property="og:description"
+    content="iOS and macOS developer and mixing engineer. Building apps for everyday life."
+  />
+  <meta
+    property="og:image"
+    content="https://cylcode886.github.io/Head_pic/cylcode_Banner_pic_1200x675.png"
+  />
+  <meta property="og:image:alt" content="YILI CHO (cylcode)" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon (emoji-based, no extra file needed) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E"
+  />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
       --bg: #0a0a0f;
       --bg2: #111118;
       --card: #16161f;
-      --border: rgba(255,255,255,0.07);
+      --border: rgba(255, 255, 255, 0.07);
       --accent: #6c63ff;
       --accent2: #a78bfa;
       --accent3: #38bdf8;
@@ -37,8 +57,19 @@
       --radius: 18px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
@@ -57,18 +88,29 @@
       opacity: 0.5;
     }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent2);
+      outline-offset: 4px;
+    }
+
+    /* Navigation */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       padding: 20px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(10,10,15,0.7);
+      background: rgba(10, 10, 15, 0.7);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav-logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
@@ -77,8 +119,18 @@
       text-decoration: none;
       letter-spacing: -0.02em;
     }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 36px); list-style: none; }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.5vw, 36px);
+      list-style: none;
+    }
+
     .nav-links a {
       font-size: 0.88rem;
       font-weight: 500;
@@ -88,10 +140,21 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--white); }
-    .nav-privacy a { white-space: nowrap; }
-    .nav-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
 
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-privacy a {
+      white-space: nowrap;
+    }
+
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 6px;
+    }
+
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -100,34 +163,60 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero-glow {
       position: absolute;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(108,99,255,0.18) 0%, transparent 70%);
-      top: -100px; right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(
+        circle,
+        rgba(108, 99, 255, 0.18) 0%,
+        transparent 70%
+      );
+      top: -100px;
+      right: -200px;
       pointer-events: none;
       animation: pulse 6s ease-in-out infinite;
     }
+
     .hero-glow2 {
       position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(56,189,248,0.10) 0%, transparent 70%);
-      bottom: 0; left: 100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.10) 0%,
+        transparent 70%
+      );
+      bottom: 0;
+      left: 100px;
       pointer-events: none;
       animation: pulse 8s ease-in-out infinite reverse;
     }
+
     @keyframes pulse {
-      0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
-      50% { transform: scale(1.08) translateY(-20px); opacity: 0.8; }
+      0%, 100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.08) translateY(-20px);
+        opacity: 0.8;
+      }
     }
 
-    .hero-content { max-width: 760px; position: relative; z-index: 1; }
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(108,99,255,0.12);
-      border: 1px solid rgba(108,99,255,0.3);
+      background: rgba(108, 99, 255, 0.12);
+      border: 1px solid rgba(108, 99, 255, 0.3);
       border-radius: 50px;
       padding: 6px 16px;
       font-size: 0.8rem;
@@ -136,16 +225,18 @@
       margin-bottom: 28px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.2s ease forwards;
+      animation: fadeUp 0.6s 0.2s ease both;
     }
+
     .hero-badge::before {
       content: '';
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       background: var(--accent);
       border-radius: 50%;
       animation: blink 2s infinite;
     }
+
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
@@ -155,84 +246,95 @@
       font-family: 'Syne', sans-serif;
       font-size: clamp(3rem, 7vw, 5.5rem);
       font-weight: 800;
-      line-height: 1.0;
+      line-height: 1;
       letter-spacing: -0.03em;
       color: var(--white);
-      opacity: 0;
-      animation: fadeUp 0.7s 0.4s ease forwards;
+      animation: fadeUp 0.7s 0.4s ease both;
     }
+
     .hero h1 .accent-text {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--accent) 0%,
+        var(--accent3) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .hero-sub {
       margin-top: 24px;
       font-size: 1.15rem;
       color: var(--muted);
       max-width: 520px;
       line-height: 1.75;
-      opacity: 0;
-      animation: fadeUp 0.7s 0.6s ease forwards;
+      animation: fadeUp 0.7s 0.6s ease both;
     }
+
     .hero-actions {
       margin-top: 44px;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.7s 0.8s ease forwards;
+      animation: fadeUp 0.7s 0.8s ease both;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 500;
-      padding: 14px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: all 0.25s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-primary:hover {
-      background: var(--accent2);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(108,99,255,0.4);
-    }
+    .btn-primary,
     .btn-outline {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
-      color: var(--text);
       font-family: 'DM Sans', sans-serif;
       font-size: 0.92rem;
       font-weight: 500;
       padding: 14px 28px;
       border-radius: 50px;
       text-decoration: none;
-      border: 1px solid var(--border);
       transition: all 0.25s;
     }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(108, 99, 255, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
     .btn-outline:hover {
-      border-color: rgba(255,255,255,0.2);
+      border-color: rgba(255, 255, 255, 0.2);
       color: var(--white);
       transform: translateY(-2px);
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    section { padding: 100px 48px; }
+    /* Shared sections */
+    section {
+      padding: 100px 48px;
+    }
+
     .section-label {
       display: inline-flex;
       align-items: center;
@@ -244,11 +346,14 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
+
     .section-label::before {
       content: '';
-      width: 20px; height: 1px;
+      width: 20px;
+      height: 1px;
       background: var(--accent);
     }
+
     .section-title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -258,6 +363,7 @@
       line-height: 1.15;
       margin-bottom: 16px;
     }
+
     .section-desc {
       color: var(--muted);
       font-size: 1rem;
@@ -266,7 +372,11 @@
       margin-bottom: 56px;
     }
 
-    #about { background: var(--bg2); }
+    /* About */
+    #about {
+      background: var(--bg2);
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -274,9 +384,15 @@
       align-items: center;
       max-width: 1100px;
     }
-    .about-photo-wrap { position: relative; }
+
+    .about-photo-wrap {
+      position: relative;
+      min-width: 0;
+    }
+
     .about-photo {
       width: 420px;
+      max-width: 100%;
       height: 420px;
       background: var(--card);
       border-radius: var(--radius);
@@ -288,43 +404,71 @@
       overflow: hidden;
       flex-shrink: 0;
     }
-    @media (max-width: 900px) {
-      .about-photo { width: 100%; height: 320px; }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: var(--radius);
     }
+
     .about-photo::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(108,99,255,0.08) 0%, transparent 60%);
+      background: linear-gradient(
+        135deg,
+        rgba(108, 99, 255, 0.08) 0%,
+        transparent 60%
+      );
       pointer-events: none;
       z-index: 1;
     }
+
     .about-corner {
       position: absolute;
-      width: 120px; height: 120px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%);
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(
+        135deg,
+        var(--accent) 0%,
+        var(--accent3) 100%
+      );
       border-radius: 16px;
       opacity: 0.15;
-      bottom: -24px; right: -24px;
+      bottom: -24px;
+      right: -24px;
       z-index: -1;
     }
+
+    .about-text {
+      min-width: 0;
+    }
+
     .about-text p {
       color: var(--muted);
       line-height: 1.8;
       margin-bottom: 20px;
     }
+
     .about-text p strong {
       color: var(--text);
       font-weight: 500;
     }
 
-    #skills { background: var(--bg); }
+    /* Skills */
+    #skills {
+      background: var(--bg);
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 1100px;
     }
+
     .skill-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -334,32 +478,46 @@
       position: relative;
       overflow: hidden;
     }
+
     .skill-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
-      background: linear-gradient(to right, var(--accent), var(--accent3));
+      background: linear-gradient(
+        to right,
+        var(--accent),
+        var(--accent3)
+      );
       opacity: 0;
       transition: opacity 0.3s;
     }
-    .skill-card:hover::before { opacity: 1; }
-    .skill-card:hover {
-      border-color: rgba(108,99,255,0.2);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+    .skill-card:hover::before {
+      opacity: 1;
     }
+
+    .skill-card:hover {
+      border-color: rgba(108, 99, 255, 0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
     .skill-icon {
       font-size: 1.8rem;
       margin-bottom: 16px;
       display: block;
     }
+
     .skill-icon img {
       width: 48px;
       height: 48px;
       object-fit: contain;
       border-radius: 10px;
     }
+
     .skill-name {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
@@ -367,20 +525,23 @@
       color: var(--white);
       margin-bottom: 8px;
     }
+
     .skill-desc {
       font-size: 0.85rem;
       color: var(--muted);
       line-height: 1.65;
     }
+
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 16px;
     }
+
     .skill-tag {
-      background: rgba(108,99,255,0.1);
-      border: 1px solid rgba(108,99,255,0.2);
+      background: rgba(108, 99, 255, 0.1);
+      border: 1px solid rgba(108, 99, 255, 0.2);
       color: var(--accent2);
       font-size: 0.72rem;
       padding: 3px 10px;
@@ -388,13 +549,22 @@
       font-weight: 500;
     }
 
-    #projects { background: var(--bg2); }
+    /* Projects */
+    #projects {
+      background: var(--bg2);
+    }
+
+    #projects .section-desc {
+      margin-bottom: 24px;
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
       max-width: 1100px;
     }
+
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -404,19 +574,27 @@
       cursor: default;
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
+
     .project-card:hover {
-      border-color: rgba(108,99,255,0.25);
+      border-color: rgba(108, 99, 255, 0.25);
       transform: translateY(-6px);
-      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
     }
+
+    .project-card[hidden] {
+      display: none !important;
+    }
+
     .project-thumb-link {
       display: block;
       text-decoration: none;
     }
+
     .project-thumb {
       width: 100%;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -424,6 +602,7 @@
       overflow: hidden;
       cursor: pointer;
     }
+
     .project-thumb-placeholder {
       position: absolute;
       inset: 0;
@@ -432,11 +611,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       font-size: 0.75rem;
       letter-spacing: 0.05em;
       z-index: 0;
     }
+
     .project-thumb img {
       position: relative;
       width: 100%;
@@ -444,26 +624,44 @@
       object-fit: cover;
       z-index: 1;
     }
+
+    .project-thumb.project-thumb-icon img {
+      object-fit: contain;
+    }
+
+    .project-thumb-static .project-thumb {
+      cursor: default;
+    }
+
     .project-thumb-label {
       position: absolute;
-      top: 10px; right: 10px;
-      background: rgba(0,0,0,0.55);
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.55);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 50px;
       padding: 3px 9px;
-      font-size: 0.65rem;
+      font-size: 0.75rem;
       color: var(--text);
       font-weight: 500;
       letter-spacing: 0.02em;
       z-index: 2;
     }
+
+    .project-thumb-label.platform-mac {
+      border-color: rgba(56, 189, 248, 0.3);
+      color: #a5e3ff;
+    }
+
     .project-body {
       padding: 24px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
+
     .project-number {
       font-family: 'Syne', sans-serif;
       font-size: 0.72rem;
@@ -473,6 +671,7 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
+
     .project-title {
       font-family: 'Syne', sans-serif;
       font-size: 1.2rem;
@@ -481,6 +680,7 @@
       margin-bottom: 10px;
       letter-spacing: -0.01em;
     }
+
     .project-desc {
       font-size: 0.875rem;
       color: var(--muted);
@@ -488,15 +688,17 @@
       margin-bottom: 18px;
       flex: 1;
     }
+
     .project-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-bottom: 20px;
     }
+
     .stack-tag {
-      background: rgba(34,197,94,0.1);
-      border: 1px solid rgba(34,197,94,0.25);
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.25);
       color: #4ade80;
       font-size: 0.7rem;
       padding: 3px 10px;
@@ -505,10 +707,14 @@
       cursor: default;
       user-select: none;
     }
+
     .project-links {
       display: flex;
       gap: 12px;
+      margin-top: auto;
+      min-height: 24px;
     }
+
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -519,13 +725,92 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .project-link:hover { color: var(--accent2); }
+
+    .project-link:hover {
+      color: var(--accent2);
+    }
+
     .project-link svg {
       width: 14px;
       height: 14px;
     }
 
-    #contact { background: var(--bg); }
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #b8b3ce;
+      font-size: 0.875rem;
+    }
+
+    .project-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent2);
+    }
+
+    .project-filters {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 5px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: var(--card);
+    }
+
+    .project-filters[hidden] {
+      display: none;
+    }
+
+    .project-filter {
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #aaa7bd;
+      background: transparent;
+      border: 0;
+      border-radius: 50px;
+      min-height: 42px;
+      padding: 8px 22px;
+      cursor: pointer;
+    }
+
+    .project-filter[aria-pressed="true"] {
+      background: var(--accent);
+      color: white;
+    }
+
+    .project-filter:hover {
+      color: white;
+    }
+
+    .project-count {
+      font-size: 0.875rem;
+      color: #aaa7bd;
+      margin: 14px 0 28px;
+    }
+
+    .project-fallback {
+      max-width: 720px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: var(--card);
+    }
+
+    .project-fallback a {
+      color: var(--accent2);
+    }
+
+    /* Contact */
+    #contact {
+      background: var(--bg);
+    }
+
     .contact-wrap {
       max-width: 720px;
       background: var(--card);
@@ -535,13 +820,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .contact-wrap::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at top left, rgba(108,99,255,0.08) 0%, transparent 60%);
+      inset: 0;
+      background: radial-gradient(
+        ellipse at top left,
+        rgba(108, 99, 255, 0.08) 0%,
+        transparent 60%
+      );
       pointer-events: none;
     }
+
     .contact-intro {
       color: var(--muted);
       line-height: 1.75;
@@ -549,6 +840,7 @@
       position: relative;
       z-index: 1;
     }
+
     .contact-links {
       display: flex;
       flex-direction: column;
@@ -557,25 +849,29 @@
       position: relative;
       z-index: 1;
     }
+
     .contact-item {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 18px 24px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border);
       border-radius: 14px;
       text-decoration: none;
       transition: all 0.25s;
     }
+
     .contact-item:hover {
-      border-color: rgba(108,99,255,0.3);
-      background: rgba(108,99,255,0.06);
+      border-color: rgba(108, 99, 255, 0.3);
+      background: rgba(108, 99, 255, 0.06);
       transform: translateX(4px);
     }
+
     .contact-icon {
-      width: 40px; height: 40px;
-      background: rgba(108,99,255,0.12);
+      width: 40px;
+      height: 40px;
+      background: rgba(108, 99, 255, 0.12);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -583,7 +879,12 @@
       font-size: 1.1rem;
       flex-shrink: 0;
     }
-    .contact-info { flex: 1; }
+
+    .contact-info {
+      flex: 1;
+      min-width: 0;
+    }
+
     .contact-label {
       font-size: 0.75rem;
       color: var(--muted);
@@ -591,251 +892,588 @@
       letter-spacing: 0.06em;
       font-weight: 500;
     }
+
     .contact-value {
       font-size: 0.95rem;
       color: var(--text);
       font-weight: 400;
       margin-top: 2px;
+      overflow-wrap: anywhere;
     }
+
     .contact-arrow {
       color: var(--muted);
       font-size: 1.1rem;
       transition: color 0.2s;
     }
-    .contact-item:hover .contact-arrow { color: var(--accent2); }
 
+    .contact-item:hover .contact-arrow {
+      color: var(--accent2);
+    }
+
+    /* Footer */
     footer {
       padding: 32px 48px;
       border-top: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
     }
+
     .footer-text {
       font-size: 0.82rem;
       color: var(--muted);
     }
-    .footer-text span { color: var(--accent); }
-    .footer-links { display: flex; gap: 24px; }
+
+    .footer-text span {
+      color: var(--accent);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
     .footer-links a {
       font-size: 0.82rem;
       color: var(--muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--white); }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+    .footer-links a:hover {
+      color: var(--white);
     }
-    .reveal.visible {
+
+    /*
+      Content stays visible by default.
+      JavaScript only enables reveal effects when supported.
+    */
+    .reveal {
       opacity: 1;
       transform: none;
     }
 
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: flex; gap: 0; }
-      .nav-links li:not(.nav-privacy) { display: none; }
-      .nav-privacy a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.75rem; letter-spacing: 0; }
-      .hero { padding: 100px 24px 60px; }
-      section { padding: 72px 24px; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-photo { aspect-ratio: 3/2; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .contact-wrap { padding: 32px 24px; }
-      footer { flex-direction: column; gap: 16px; text-align: center; }
+    .reveal.reveal-pending {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    /* Projects: preserve the existing cards and add platform selection. */
-    #projects .section-desc { margin-bottom: 24px; }
-    .project-filters { display: inline-flex; flex-wrap: wrap; gap: 5px; padding: 5px; border: 1px solid var(--border); border-radius: 50px; background: var(--card); }
-    .project-filter { font: inherit; font-size: 0.9rem; font-weight: 500; color: #aaa7bd; background: transparent; border: 0; border-radius: 50px; min-height: 42px; padding: 8px 22px; cursor: pointer; }
-    .project-filter[aria-pressed="true"] { background: var(--accent); color: white; }
-    .project-filter:hover { color: white; }
-    .project-filter:focus-visible, .project-link:focus-visible, .project-thumb-link:focus-visible { outline: 3px solid var(--accent2); outline-offset: 4px; }
-    .project-count { font-size: 0.875rem; color: #aaa7bd; margin: 14px 0 28px; }
-    .project-card[hidden] { display: none !important; }
-    .project-thumb-static .project-thumb { cursor: default; }
-    .project-thumb.project-thumb-icon img { width: 100%; height: 100%; object-fit: contain; }
-    .project-thumb-label { font-size: 0.75rem; }
-    .project-thumb-label.platform-mac { border-color: rgba(56,189,248,.3); color: #a5e3ff; }
-    .project-status { display: inline-flex; align-items: center; gap: 8px; color: #b8b3ce; font-size: 0.875rem; }
-    .project-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
-    .project-links { margin-top: auto; min-height: 24px; }
+    .reveal.reveal-pending.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-photo {
+        width: 100%;
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 0;
+      }
+
+      .nav-links li:not(.nav-privacy) {
+        display: none;
+      }
+
+      .nav-privacy a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        font-size: 0.75rem;
+        letter-spacing: 0;
+      }
+
+      .hero {
+        padding: 100px 24px 60px;
+      }
+
+      section {
+        padding: 72px 24px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-photo {
+        aspect-ratio: 3 / 2;
+      }
+
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-wrap {
+        padding: 32px 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* Respect reduced-motion settings */
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal, .hero-badge, .hero h1, .hero-sub, .hero-actions { opacity: 1; transform: none; animation: none; transition: none; }
-      .hero-glow, .hero-glow2, .hero-badge::before { animation: none; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal,
+      .reveal.reveal-pending,
+      .hero-badge,
+      .hero h1,
+      .hero-sub,
+      .hero-actions {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+      }
+
+      .hero-glow,
+      .hero-glow2,
+      .hero-badge::before {
+        animation: none;
+      }
+
+      .skill-card,
+      .project-card,
+      .btn-primary,
+      .btn-outline,
+      .contact-item {
+        transition: none;
+      }
+
+      .skill-card:hover,
+      .project-card:hover,
+      .btn-primary:hover,
+      .btn-outline:hover,
+      .contact-item:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
-<body>
 
-  <nav>
+<body>
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
     <a href="#home" class="nav-logo">cylcode<span>.</span></a>
+
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li class="nav-privacy"><a href="https://cylcode886.github.io/App-Privacy-Policy/">Privacy Policy</a></li>
+      <li class="nav-privacy">
+        <a href="https://cylcode886.github.io/App-Privacy-Policy/">
+          Privacy Policy
+        </a>
+      </li>
     </ul>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-glow"></div>
-    <div class="hero-glow2"></div>
-    <div class="hero-content">
-      <div class="hero-badge">iOS &amp; macOS Developer</div>
-      <h1>Building Apps<br />for <span class="accent-text">Everyday</span><br />Life</h1>
-      <p class="hero-sub">Apps for iOS and macOS across productivity, tools, music, sports, wellness, games and more — designed simple, built to be useful every day.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">
-          View Portfolio
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#contact" class="btn-outline">Get in Touch</a>
-      </div>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-glow2" aria-hidden="true"></div>
 
-  <section id="about">
-    <div class="about-grid">
-      <div class="about-photo-wrap reveal">
-        <div class="about-photo">
-          <img src="Head_pic/cylcode_Banner_pic_1200x675.png" alt="cylcode" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:var(--radius);">
+      <div class="hero-content">
+        <div class="hero-badge">iOS &amp; macOS Developer</div>
+
+        <h1>
+          Building Apps<br />
+          for <span class="accent-text">Everyday</span><br />
+          Life
+        </h1>
+
+        <p class="hero-sub">
+          Apps for iOS and macOS across productivity, tools, music, sports,
+          wellness, games and more — designed simple, built to be useful
+          every day.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            View Portfolio
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
-        <div class="about-corner"></div>
       </div>
-      <div class="about-text reveal">
-        <div class="section-label">About Me</div>
-        <h2 class="section-title">Hi, I'm YILI CHO (cylcode)</h2>
-        <p>As an iOS and macOS developer and mixing engineer, I blend creativity with functionality in both app development and music production.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="section-label reveal">Skills</div>
-    <h2 class="section-title reveal">What I Work With</h2>
-    <p class="section-desc reveal">The tools I use to build, create, and bring ideas to life.</p>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/XCode_1_icon-iOS-Default-1024x1024@1x.png" alt="Xcode"></span>
-        <div class="skill-name">Xcode</div>
-        <div class="skill-desc">Apple's primary IDE for building iOS, macOS, and watchOS apps — paired with Xcode declarative framework for crafting beautiful, responsive interfaces.</div>
-        <div class="skill-tags"><span class="skill-tag">Swift</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Simulator</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/protools_icon_256x256.png" alt="Avid Pro Tools"></span>
-        <div class="skill-name">Avid Pro Tools</div>
-        <div class="skill-desc">Industry-standard digital audio workstation for professional recording, mixing, and audio post-production workflows.</div>
-        <div class="skill-tags"><span class="skill-tag">Audio Editing</span><span class="skill-tag">Mixing</span><span class="skill-tag">Recording</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/LP_1_icon-iOS-Default-1024x1024@1x.png" alt="Logic Pro"></span>
-        <div class="skill-name">Logic Pro</div>
-        <div class="skill-desc">Apple's professional music production software for composing, arranging, and producing tracks — from sketching ideas to full studio-quality mixes.</div>
-        <div class="skill-tags"><span class="skill-tag">Music Production</span><span class="skill-tag">Composition</span><span class="skill-tag">MIDI</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/FCP_3icon-iOS-Default-1024x1024@1x.png" alt="Final Cut Pro"></span>
-        <div class="skill-name">Final Cut Pro</div>
-        <div class="skill-desc">Apple's pro video editing software for cutting, color grading, and delivering polished video content with a fast, magnetic timeline workflow.</div>
-        <div class="skill-tags"><span class="skill-tag">Video Editing</span><span class="skill-tag">Color Grading</span><span class="skill-tag">Motion</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/Illustrator_1_icon-iOS-Default-1024x1024@1x.png" alt="Adobe Illustrator"></span>
-        <div class="skill-name">Adobe Illustrator</div>
-        <div class="skill-desc">Vector-based design tool for creating app icons, UI mockups, illustrations, and scalable graphics that look sharp on every screen size.</div>
-        <div class="skill-tags"><span class="skill-tag">Vector Design</span><span class="skill-tag">App Icons</span><span class="skill-tag">UI Mockups</span></div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon"><img src="LOGO_ICON/AI_Logo_1_icon-iOS-Default-1024x1024@1x.png" alt="AI Tools"></span>
-        <div class="skill-name">AI Tools</div>
-        <div class="skill-desc">Proficient in using ChatGPT and Claude to brainstorm app ideas, debug and review code, draft app descriptions, and accelerate development workflows.</div>
-        <div class="skill-tags"><span class="skill-tag">AI Assistant</span><span class="skill-tag">Code Review</span><span class="skill-tag">Brainstorming</span></div>
-      </div>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo">
+            <img
+              src="Head_pic/cylcode_Banner_pic_1200x675.png"
+              alt="YILI CHO (cylcode)"
+              width="1200"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="about-corner" aria-hidden="true"></div>
+        </div>
 
-  <!--
-    PROJECTS — data-driven render.
-    To add a new project: scroll to the <script> below and add a new
-    object at the TOP of the `projects` array. Numbers auto-generate.
-  -->
-  <section id="projects">
-    <div class="section-label reveal">Portfolio</div>
-    <h2 class="section-title reveal">App Projects</h2>
-    <p class="section-desc reveal">Apps for iOS and macOS — from everyday tools to music, sports, wellness, games and more.</p>
-    <div class="project-filters reveal" role="group" aria-label="Filter projects by platform">
-      <button type="button" class="project-filter" data-filter="all" aria-pressed="true" aria-controls="projectsGrid">All</button>
-      <button type="button" class="project-filter" data-filter="iOS" aria-pressed="false" aria-controls="projectsGrid">iOS</button>
-      <button type="button" class="project-filter" data-filter="macOS" aria-pressed="false" aria-controls="projectsGrid">macOS</button>
-    </div>
-    <p id="projectCount" class="project-count" role="status" aria-live="polite" aria-atomic="true"></p>
-    <div class="projects-grid" id="projectsGrid"></div>
-  </section>
+        <div class="about-text reveal">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Hi, I'm YILI CHO (cylcode)</h2>
+          <p>
+            As an iOS and macOS developer and mixing engineer, I blend
+            creativity with functionality in both app development and
+            music production.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <div class="section-label reveal">Contact</div>
-    <h2 class="section-title reveal">Let's Connect</h2>
-    <div class="contact-wrap reveal">
-      <p class="contact-intro">
-        Whether it's a collaboration, a project idea, or just a chat about iOS and macOS development and music — feel free to reach out anytime.
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-label reveal">Skills</div>
+      <h2 class="section-title reveal">What I Work With</h2>
+      <p class="section-desc reveal">
+        The tools I use to build, create, and bring ideas to life.
       </p>
-      <div class="contact-links">
-        <a href="mailto:cylcode@icloud.com" class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div class="contact-info">
-            <div class="contact-label">Email</div>
-            <div class="contact-value">cylcode@icloud.com</div>
-          </div>
-          <span class="contact-arrow">→</span>
-        </a>
-        <a href="https://github.com/cylcode886" target="_blank" rel="noopener noreferrer" class="contact-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent2)" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">github.com/cylcode886</div>
-          </div>
-          <span class="contact-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
 
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/XCode_1_icon-iOS-Default-1024x1024@1x.png"
+              alt="Xcode"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">Xcode</div>
+          <div class="skill-desc">
+            Apple's primary IDE for building iOS, macOS, and watchOS apps —
+            paired with SwiftUI, Apple’s declarative UI framework for
+            crafting beautiful, responsive interfaces.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">Simulator</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/protools_icon_256x256.png"
+              alt="Avid Pro Tools"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">Avid Pro Tools</div>
+          <div class="skill-desc">
+            Industry-standard digital audio workstation for professional
+            recording, mixing, and audio post-production workflows.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Audio Editing</span>
+            <span class="skill-tag">Mixing</span>
+            <span class="skill-tag">Recording</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/LP_1_icon-iOS-Default-1024x1024@1x.png"
+              alt="Logic Pro"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">Logic Pro</div>
+          <div class="skill-desc">
+            Apple's professional music production software for composing,
+            arranging, and producing tracks — from sketching ideas to full
+            studio-quality mixes.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Music Production</span>
+            <span class="skill-tag">Composition</span>
+            <span class="skill-tag">MIDI</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/FCP_3icon-iOS-Default-1024x1024@1x.png"
+              alt="Final Cut Pro"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">Final Cut Pro</div>
+          <div class="skill-desc">
+            Apple's pro video editing software for cutting, color grading,
+            and delivering polished video content with a fast, magnetic
+            timeline workflow.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Video Editing</span>
+            <span class="skill-tag">Color Grading</span>
+            <span class="skill-tag">Motion</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/Illustrator_1_icon-iOS-Default-1024x1024@1x.png"
+              alt="Adobe Illustrator"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">Adobe Illustrator</div>
+          <div class="skill-desc">
+            Vector-based design tool for creating app icons, UI mockups,
+            illustrations, and scalable graphics that look sharp on every
+            screen size.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Vector Design</span>
+            <span class="skill-tag">App Icons</span>
+            <span class="skill-tag">UI Mockups</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <span class="skill-icon">
+            <img
+              src="LOGO_ICON/AI_Logo_1_icon-iOS-Default-1024x1024@1x.png"
+              alt="AI Tools"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="skill-name">AI Tools</div>
+          <div class="skill-desc">
+            Proficient in using ChatGPT and Claude to brainstorm app ideas,
+            debug and review code, draft app descriptions, and accelerate
+            development workflows.
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Assistant</span>
+            <span class="skill-tag">Code Review</span>
+            <span class="skill-tag">Brainstorming</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      PROJECTS
+      Add new projects to the projects array in the script below.
+      Project numbers are generated automatically.
+    -->
+    <section id="projects">
+      <div class="section-label reveal">Portfolio</div>
+      <h2 class="section-title reveal">App Projects</h2>
+      <p class="section-desc reveal">
+        Apps for iOS and macOS — from everyday tools to music, sports,
+        wellness, games and more.
+      </p>
+
+      <div
+        id="projectFilters"
+        class="project-filters reveal"
+        role="group"
+        aria-label="Filter projects by platform"
+        hidden
+      >
+        <button
+          type="button"
+          class="project-filter"
+          data-filter="all"
+          aria-pressed="true"
+          aria-controls="projectsGrid"
+        >All</button>
+
+        <button
+          type="button"
+          class="project-filter"
+          data-filter="iOS"
+          aria-pressed="false"
+          aria-controls="projectsGrid"
+        >iOS</button>
+
+        <button
+          type="button"
+          class="project-filter"
+          data-filter="macOS"
+          aria-pressed="false"
+          aria-controls="projectsGrid"
+        >macOS</button>
+      </div>
+
+      <p
+        id="projectCount"
+        class="project-count"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      ></p>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Remains available if JavaScript cannot render the cards. -->
+        <p class="project-fallback">
+          Explore <a href="https://cylcode886.github.io/ez-recx/">EZ RecX</a>,
+          or <a href="#contact">contact me</a> to learn more about my apps.
+          Enable JavaScript to browse and filter the complete portfolio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-label reveal">Contact</div>
+      <h2 class="section-title reveal">Let's Connect</h2>
+
+      <div class="contact-wrap reveal">
+        <p class="contact-intro">
+          Whether it's a collaboration, a project idea, or just a chat
+          about iOS and macOS development and music — feel free to reach
+          out anytime.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:cylcode@icloud.com" class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📧</div>
+            <div class="contact-info">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">cylcode@icloud.com</div>
+            </div>
+            <span class="contact-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            href="https://github.com/cylcode886"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+          >
+            <div class="contact-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                style="color:var(--accent2)"
+                aria-hidden="true"
+              >
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">github.com/cylcode886</div>
+            </div>
+            <span class="contact-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: edit the name here -->
   <footer>
     <div class="footer-text">
-      © <span id="footerYear"></span> <span>cylcode</span> — iOS &amp; macOS Developer
+      © <span id="footerYear">2026</span>
+      <span>YILI CHO (cylcode)</span> — iOS &amp; macOS Developer
     </div>
+
     <div class="footer-links">
       <a href="#home">Top</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="https://cylcode886.github.io/App-Privacy-Policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      <a
+        href="https://cylcode886.github.io/App-Privacy-Policy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Privacy Policy</a>
     </div>
   </footer>
 
   <script>
-    // ════════════════════════════════════════════════════════════════
+    'use strict';
+
+    // ============================================================
     // PROJECTS DATA
-    // To add a new project: paste a new object at the TOP of this array.
-    // Numbers auto-generate. No HTML editing needed.
-    // ════════════════════════════════════════════════════════════════
+    //
+    // Add a new project at the TOP of this array.
+    // Numbers are generated automatically.
+    //
+    // platform: 'iOS' or 'macOS'
+    // linkType: 'product' for a product website.
+    // Omit linkType for an App Store link.
+    // ============================================================
+
     const projects = [
       {
         title: 'EZ RecX',
         platform: 'macOS',
-        // Add the real App Store URL here when the app is available.
         url: 'https://cylcode886.github.io/ez-recx/',
-        //status: 'Coming soon',
+        linkType: 'product',
         image: 'https://cylcode886.github.io/App_Icon_SS/EZ%20Screen%20Recorder%20IC_2-iOS-Default-1024x1024%401x.png',
         imageType: 'icon',
         emoji: '🎬',
@@ -845,6 +1483,7 @@
       },
       {
         title: 'EZ Currency',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/ez-currency/id6766535653',
         image: 'App_Icon_SS/11.EZCurrencyIcon.png',
         emoji: '💱',
@@ -854,6 +1493,7 @@
       },
       {
         title: 'GTB CHORDS',
+        platform: 'iOS',
         url: 'https://apps.apple.com/tw/app/gtb-chords/id6764719857',
         image: 'App_Icon_SS/10.GTB_CHORDS_Logo.png',
         emoji: '🎸',
@@ -863,6 +1503,7 @@
       },
       {
         title: 'We Wall Sit',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/we-wall-sit/id6761374182',
         image: 'App_Icon_SS/7.We_Wall_Sit.png',
         emoji: '🦵',
@@ -872,6 +1513,7 @@
       },
       {
         title: 'EZ Shotclock',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/bs-board/id1659995687',
         image: 'App_Icon_SS/1.BS_Board.png',
         emoji: '🏀',
@@ -881,6 +1523,7 @@
       },
       {
         title: 'EZ Breather',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/ez-breathe-app/id6760581445',
         image: 'App_Icon_SS/3.EZ_Breathe.png',
         emoji: '🌬️',
@@ -890,6 +1533,7 @@
       },
       {
         title: 'K13 Piano',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/k13-piano/id6760742525',
         image: 'App_Icon_SS/4.K13_Piano.png',
         emoji: '🎹',
@@ -899,6 +1543,7 @@
       },
       {
         title: 'Baseball Snake',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/baseball-snake/id6761117819',
         image: 'App_Icon_SS/2.Baseball_Snake.png',
         emoji: '⚾',
@@ -908,6 +1553,7 @@
       },
       {
         title: 'Sky Versus',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/sky-versus/id6761248880',
         image: 'App_Icon_SS/6.Sky_Versus.png',
         emoji: '⚔️',
@@ -917,6 +1563,7 @@
       },
       {
         title: 'EZ Medication',
+        platform: 'iOS',
         url: 'https://apps.apple.com/us/app/ez-medication/id6761795519',
         image: 'App_Icon_SS/8.EZ_TYM.png',
         emoji: '💊',
@@ -926,95 +1573,293 @@
       }
     ];
 
+    // Escape text before inserting it into HTML.
     function escapeHTML(value) {
       return String(value).replace(/[&<>"']/g, char => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
       })[char]);
     }
 
     function renderProjects() {
       const grid = document.getElementById('projectsGrid');
-      grid.innerHTML = projects.map((p, i) => {
-        const num = String(i + 1).padStart(2, '0');
-        const platform = p.platform || 'iOS';
-        const title = escapeHTML(p.title);
-        const stackTags = p.stack.map(s => `<span class="stack-tag">${escapeHTML(s)}</span>`).join('');
-        const thumb = `
-          <div class="project-thumb ${p.imageType === 'icon' ? 'project-thumb-icon' : ''}" style="background:${p.gradient};">
+
+      // Build the complete markup before replacing the fallback.
+      const markup = projects.map((project, index) => {
+        const number = String(index + 1).padStart(2, '0');
+        const platform = project.platform || 'iOS';
+        const safePlatform = escapeHTML(platform);
+        const title = escapeHTML(project.title);
+        const isProductPage = project.linkType === 'product';
+
+        const linkLabel = isProductPage
+          ? 'View Product'
+          : platform === 'macOS'
+            ? 'Mac App Store'
+            : 'App Store';
+
+        const accessibleLabel = isProductPage
+          ? `Visit the ${project.title} product website`
+          : `View ${project.title} on the App Store`;
+
+        const stackTags = project.stack.map(tag => (
+          `<span class="stack-tag">${escapeHTML(tag)}</span>`
+        )).join('');
+
+        const thumbnail = `
+          <div
+            class="project-thumb ${project.imageType === 'icon' ? 'project-thumb-icon' : ''}"
+            style="background:${escapeHTML(project.gradient)};"
+          >
             <div class="project-thumb-placeholder" aria-hidden="true">
-              <span style="font-size:3rem;">${p.emoji}</span>
+              <span style="font-size:3rem;">${escapeHTML(project.emoji)}</span>
             </div>
-            <img src="${escapeHTML(p.image)}" alt="${title}" decoding="async" fetchpriority="${i < 3 ? 'high' : 'auto'}" onerror="this.style.display='none'">
-            <div class="project-thumb-label ${platform === 'macOS' ? 'platform-mac' : ''}">${platform} App</div>
-          </div>`;
-        const storeLink = p.url ? `
-          <a href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" class="project-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-            </svg>
-            ${platform === 'macOS' ? 'Mac App Store' : 'App Store'}
-          </a>` : `<span class="project-status">${escapeHTML(p.status || 'Coming soon')}</span>`;
+
+            <img
+              src="${escapeHTML(project.image)}"
+              alt="${title}"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="project-thumb-label ${platform === 'macOS' ? 'platform-mac' : ''}">
+              ${safePlatform} App
+            </div>
+          </div>
+        `;
+
+        const thumbnailContainer = project.url
+          ? `
+            <a
+              class="project-thumb-link"
+              href="${escapeHTML(project.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="${escapeHTML(accessibleLabel)}"
+            >
+              ${thumbnail}
+            </a>
+          `
+          : `
+            <div class="project-thumb-static">
+              ${thumbnail}
+            </div>
+          `;
+
+        const projectLink = project.url
+          ? `
+            <a
+              href="${escapeHTML(project.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="${escapeHTML(accessibleLabel)}"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+              ${linkLabel}
+            </a>
+          `
+          : `
+            <span class="project-status">
+              ${escapeHTML(project.status || 'Coming soon')}
+            </span>
+          `;
+
         return `
-          <article class="project-card reveal" data-project-platform="${platform}" aria-labelledby="project-title-${i}">
-            ${p.url ? `<a class="project-thumb-link" href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${title} on the App Store">${thumb}</a>` : `<div class="project-thumb-static">${thumb}</div>`}
+          <article
+            class="project-card reveal"
+            data-project-platform="${safePlatform}"
+            aria-labelledby="project-title-${index}"
+          >
+            ${thumbnailContainer}
+
             <div class="project-body">
-              <div class="project-number">Project ${num}</div>
-              <h3 class="project-title" id="project-title-${i}">${title}</h3>
-              <p class="project-desc">${escapeHTML(p.desc)}</p>
-              <div class="project-stack">${stackTags}</div>
-              <div class="project-links">${storeLink}</div>
+              <div class="project-number">Project ${number}</div>
+
+              <h3 class="project-title" id="project-title-${index}">
+                ${title}
+              </h3>
+
+              <p class="project-desc">
+                ${escapeHTML(project.desc)}
+              </p>
+
+              <div class="project-stack">
+                ${stackTags}
+              </div>
+
+              <div class="project-links">
+                ${projectLink}
+              </div>
             </div>
-          </article>`;
+          </article>
+        `;
       }).join('');
-      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      grid.innerHTML = markup;
+
+      // Show the emoji placeholder if an image cannot load.
+      grid.querySelectorAll('img').forEach(img => {
+        const showPlaceholder = () => {
+          img.style.display = 'none';
+        };
+
+        img.addEventListener('error', showPlaceholder, { once: true });
+
+        if (img.complete && img.naturalWidth === 0) {
+          showPlaceholder();
+        }
+      });
+
+      document.querySelectorAll('.project-filter').forEach(button => {
+        button.addEventListener('click', () => {
+          filterProjects(button.dataset.filter);
+        });
+      });
+
       filterProjects('all', false);
+      document.getElementById('projectFilters').hidden = false;
     }
 
     function filterProjects(platform, revealImmediately = true) {
       let count = 0;
+
       document.querySelectorAll('[data-project-platform]').forEach(card => {
-        const show = platform === 'all' || card.dataset.projectPlatform === platform;
+        const show =
+          platform === 'all' ||
+          card.dataset.projectPlatform === platform;
+
         card.hidden = !show;
+
         if (show) {
           count++;
-          if (revealImmediately) card.classList.add('visible');
+
+          if (revealImmediately) {
+            card.classList.add('visible');
+          }
         }
       });
+
       document.querySelectorAll('.project-filter').forEach(button => {
-        button.setAttribute('aria-pressed', String(button.dataset.filter === platform));
+        button.setAttribute(
+          'aria-pressed',
+          String(button.dataset.filter === platform)
+        );
       });
-      document.getElementById('projectCount').textContent = `${count} ${count === 1 ? 'project' : 'projects'} · ${platform === 'all' ? 'iOS & macOS' : platform}`;
+
+      const platformLabel =
+        platform === 'all' ? 'iOS & macOS' : platform;
+
+      document.getElementById('projectCount').textContent =
+        `${count} ${count === 1 ? 'project' : 'projects'} · ${platformLabel}`;
     }
 
-    document.querySelectorAll('.project-filter').forEach(button => {
-      button.addEventListener('click', () => filterProjects(button.dataset.filter));
-    });
+    // Keep the year automatic; HTML contains 2026 as a fallback.
+    document.getElementById('footerYear').textContent =
+      new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    // A project-rendering error does not hide the rest of the page.
+    try {
+      renderProjects();
+    } catch (error) {
+      console.error('Unable to render the portfolio:', error);
+    }
+
+    // Reveal effects are optional. Content is visible without them.
+    function setupRevealAnimations() {
+      const elements = document.querySelectorAll('.reveal');
+      const reduceMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      );
+
+      if (
+        reduceMotion.matches ||
+        !('IntersectionObserver' in window)
+      ) {
+        return;
+      }
+
+      let observer;
+
+      try {
+        observer = new IntersectionObserver(entries => {
+          entries.forEach((entry, index) => {
+            if (!entry.isIntersecting) return;
+
+            window.setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 80);
+
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.1 });
+
+        elements.forEach(element => {
+          element.classList.add('reveal-pending');
+          observer.observe(element);
+        });
+      } catch (error) {
+        if (observer) observer.disconnect();
+
+        elements.forEach(element => {
+          element.classList.remove('reveal-pending');
+        });
+      }
+    }
+
+    setupRevealAnimations();
+
+    // Highlight the current section in the navigation.
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    let navigationUpdatePending = false;
+
+    function updateActiveNavigation() {
+      let current = '';
+
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 120) {
+          current = section.id;
         }
       });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      navLinks.forEach(link => {
+        const active = link.getAttribute('href') === `#${current}`;
+        link.style.color = active ? 'var(--white)' : '';
 
-    renderProjects();
+        if (active) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
 
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
-      });
-      navLinks.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--white)' : '';
-      });
-    });
+      if (navigationUpdatePending) return;
 
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
+      navigationUpdatePending = true;
+
+      window.requestAnimationFrame(() => {
+        updateActiveNavigation();
+        navigationUpdatePending = false;
+      });
+    }, { passive: true });
+
+    window.addEventListener('resize', updateActiveNavigation);
+    window.addEventListener('load', updateActiveNavigation);
+    updateActiveNavigation();
   </script>
 </body>
 </html>
