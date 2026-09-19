@@ -7,7 +7,7 @@
 - styles.css、page.js、assets/：共用版面、語言選單與新版品牌圖片。
 - assets/optimized/：較小圖示及無損 WebP；原始 PNG 保留作相容與分享用途。
 
-公開網址：https://cylcode886.github.io/ez-recx/
+公開網址：https://cylcode.pages.dev/ez-recx/
 
 上傳請更新儲存庫的 ez-recx 內容，勿覆蓋最外層 index.html。
 圖片採用最後確認的新 Logo 及四語原生介面。此 README 不表示已部署，部署狀態以 GitHub Pages 為準。
