@@ -12,6 +12,7 @@
   <meta property="og:locale" content="zh_CN">
   <link rel="icon" href="assets/optimized/favicon-48.png?v=33b04a75c38f" type="image/png">
   <link rel="stylesheet" href="styles.css?v=afb937c7f499">
+  <link rel="stylesheet" href="editor-section.css?v=20261001">
   <script src="page.js?v=81de78c7f0d6" defer></script>
   <link rel="canonical" href="https://cylcode.pages.dev/ez-recx/zh-Hans.html">
   <meta property="og:url" content="https://cylcode.pages.dev/ez-recx/zh-Hans.html">
@@ -45,7 +46,7 @@
   <header class="header">
     <div class="nav wrap">
       <a class="brand" href="#top" aria-label="EZ RecX 首页"><img src="assets/optimized/icon-192.png?v=334416957951" decoding="async" alt="" width="38" height="38"><span>EZ RecX</span></a>
-      <nav aria-label="主菜单"><a href="#features">功能</a><a href="#how">使用方式</a><a href="#faq">常见问题</a><a class="privacy-nav" href="https://cylcode.pages.dev/privacy/#macos-zh-Hans">隐私政策</a></nav>
+      <nav aria-label="主菜单"><a href="#features">功能</a><a href="#editing">剪辑</a><a href="#how">使用方式</a><a href="#faq">常见问题</a><a class="privacy-nav" href="https://cylcode.pages.dev/privacy/#macos-zh-Hans">隐私政策</a></nav>
       <details class="language-switch"><summary aria-label="选择语言: 简体中文"><span aria-hidden="true">◎</span> 简体中文 <span aria-hidden="true">⌄</span></summary><div class="language-options"><a href="index.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="en.html" lang="en" hreflang="en">English</a><a href="zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">简体中文</a><a href="ja.html" lang="ja" hreflang="ja">日本語</a></div></details>
       <a class="button nav-cta" href="https://apps.apple.com/app/id6809180442?mt=12">前往 App Store <span aria-hidden="true">↗</span></a>
     </div>
@@ -55,7 +56,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> SCREEN · AUDIO · CAMERA</p>
         <h1 id="hero-title">想分享的画面，<br><span>按下录制就好。</span></h1>
-        <p class="intro">一段操作、一个想法、一堂教学。<br>用 EZ RecX 把屏幕与声音一起留下，<br>让想说的事，更容易被看见。</p>
+        <p class="intro">一段操作、一个想法、一堂教学。<br>用 EZ RecX 把屏幕与声音一起留下，<br>录完再用时间轴剪出重点。</p>
         <div class="hero-actions"><a class="button primary" href="https://apps.apple.com/app/id6809180442?mt=12">在 App Store 获取 <span aria-hidden="true">↗</span></a><a class="text-link" href="#features">看看它能做什么 <span aria-hidden="true">↓</span></a></div>
         <p class="purchase-note"><!-- 一次购买，无需订阅。--><span>macOS 26.0 或更高版本</span></p>
         <div class="hero-signature"><span class="tiny-line"></span> 少一点设置，多一点表达。</div>
@@ -87,10 +88,20 @@
       <div><p class="eyebrow">02 / MAKE YOURSELF HEARD</p><h2>不只看见。<br><span>也听见你的想法。</span></h2><p class="section-copy">选择系统音频、麦克风，或两者一起。<br>再加入摄像头画面，让讲解更有温度。</p><a class="text-link" href="#how">开始你的第一段录制 <span aria-hidden="true">↗</span></a></div>
       <div class="sound-list"><article><span aria-hidden="true">01</span><div><h3>电脑里的声音</h3><p>录下系统正在播放的音频，让画面保留原来的声音。</p></div><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article><article><span aria-hidden="true">02</span><div><h3>你的旁白</h3><p>搭配麦克风说明步骤，也能选择不录音，只记录画面。</p></div></article><article><span aria-hidden="true">03</span><div><h3>镜头前的你</h3><p>通过摄像头画面陪伴观众，一起看懂你的演示。</p></div></article></div>
     </div></section>
+    <section class="edit-section" id="editing" aria-labelledby="editing-title"><div class="wrap">
+      <div class="edit-heading"><div><p class="eyebrow">03 / EDIT YOUR RECORDING</p><h2 id="editing-title">录完，就在时间轴<br><span>把重点剪出来。</span></h2></div><p>拆分、裁短、移动片段与调整声音，直接在录制预览窗口完成。另存想分享的版本，原始录制保留不变。</p></div>
+      <figure class="edit-visual"><img src="assets/zh-Hans/02_Edit_Your_Recording_v2_Hans.png" width="2560" height="1600" loading="lazy" decoding="async" alt="EZ RecX 录制编辑器：视频与音轨时间轴、片段选择及音量控制"><figcaption>直接在录制预览与编辑窗口整理视频，无需先转到另一款剪辑软件。</figcaption></figure>
+      <div class="edit-points">
+        <article><span>01 / CUT</span><h3>在时间轴直接剪</h3><p>播放杆定位后拆分片段，拖动两端裁短并吸附对齐；删除不要的画面，后续视频依波纹剪辑规则自动靠齐。</p></article>
+        <article><span>02 / TRACKS</span><h3>需要时才加第二轨</h3><p>默认一条视频、一条音轨；要安排上层画面或重叠声音时，视频与音频各可再新增一轨。</p></article>
+        <article><span>03 / AUDIO</span><h3>让声音接点更顺</h3><p>在波形上调整音量线与控制点，拖动淡入淡出；两条音轨可重叠并建立交叉淡化。</p></article>
+        <article><span>04 / FINISH</span><h3>放心反复修改</h3><p>相邻画面可加简易过渡，画面与声音可分别停用。剪错可撤销或重做；完成后自定义文件名与位置另存，不覆盖原片。</p></article>
+      </div>
+    </div></section>
     <section class="section wrap" id="how" aria-labelledby="how-title">
-      <div class="section-head"><div><p class="eyebrow">03 / KEEP IT SIMPLE</p><h2 id="how-title">从想法到视频，<br>三步就到位。</h2></div><p>无需创建账号。<br>首次打开，也有可跳过的教程带你开始。</p></div>
-      <ol class="steps"><li><span>1</span><h3>选好范围</h3><p>选择录制模式，设置保存位置、声音与画质。</p></li><li><span>2</span><h3>开始录制</h3><p>按提示允许所需权限。倒数后，专心完成你的演示。</p></li><li><span>3</span><h3>停止并保存</h3><p>点击停止，或使用 <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>S</kbd>，再打开视频播放。</p></li></ol>
-      <div class="details-grid"><article><p class="eyebrow">YOUR FILES, YOUR CHOICE</p><h3>录好的视频，<br>留在你选的位置。</h3><p>导出 MP4 或 MOV，搭配你习惯的播放器与剪辑工具。录制内容在设备上处理，不会上传至开发者服务器。</p></article><article><p class="eyebrow">CLARITY THAT FITS</p><h3>为每一次分享，<br>选择合适画质。</h3><p>720p、1080p、1440p 至最高 4K，目标 30 fps。实际输出取决于录制范围、屏幕与设置。</p></article></div>
+      <div class="section-head"><div><p class="eyebrow">04 / KEEP IT SIMPLE</p><h2 id="how-title">从想法到视频，<br>三步就到位。</h2></div><p>无需创建账号。<br>首次打开，也有可跳过的教程带你开始。</p></div>
+      <ol class="steps"><li><span>1</span><h3>选好范围</h3><p>选择录制模式，设置保存位置、声音与画质。</p></li><li><span>2</span><h3>开始录制</h3><p>按提示允许所需权限。倒数后，专心完成你的演示。</p></li><li><span>3</span><h3>预览与剪辑</h3><p>点击停止，或使用 <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>S</kbd>。检查视频、剪出重点，再另存编辑版。</p></li></ol>
+      <div class="details-grid"><article><p class="eyebrow">YOUR FILES, YOUR CHOICE</p><h3>录好的视频，<br>留在你选的位置。</h3><p>录制可导出 MP4 或 MOV；剪辑结果另外保存，原始录制不会被覆盖。内容在设备上处理，不会上传至开发者服务器。</p></article><article><p class="eyebrow">CLARITY THAT FITS</p><h3>为每一次分享，<br>选择合适画质。</h3><p>720p、1080p、1440p 至最高 4K，目标 30 fps。实际输出取决于录制范围、屏幕与设置。</p></article></div>
     </section>
     <section class="faq-section" id="faq"><div class="wrap faq-grid"><div><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2>开始之前，<br>你可能想知道。</h2></div><div class="faq-items">
       <details open><summary>买一次就可以使用吗？</summary><p>是。EZ RecX 采用一次购买，无需订阅，也没有额外 App 内购买。实际价格与供应情况请以你所在地区的 App Store 为准。</p></details>
